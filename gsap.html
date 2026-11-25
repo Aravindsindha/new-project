@@ -1,507 +1,648 @@
 <!-- fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Vidaloka&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+ 
 <!-- swiper js -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Font Family
+font-family:"Pacifico",cursive;
+font-family:"Oswald",sans-serif;-->
 
 <style>
-body .page-wrapper, .resp-body #root .page-wrapper {margin:0; padding:0; box-sizing:border-box; background-color:var(--html-primary-dark); color:#000; font-size:18px; font-weight:600; line-height:1.3; position:relative; overflow:hidden; --html-primary-dark:#051218; --html-primary-light:#264d5a; --html-secondary:#f1bb04; --color-light:#ffffff; --color-dark:#000000; background:radial-gradient(circle at center,#103848 0%,#072430 100%); --color-filter:brightness(0) saturate(100%) invert(27%) sepia(33%) saturate(594%) hue-rotate(147deg) brightness(200%) contrast(95%);}
+body .page-wrapper, .resp-body #root .page-wrapper {margin:0; padding:0; box-sizing:border-box; background-color: #ece4de; color:#000; font-size:18px; font-weight:600; line-height:1.3; position:relative; overflow:hidden; --html-light-primary:#bcc887; --html-dark-primary:#3a4508; --html-secondary:#f56421; --color-light:#ffffff; --color-dark:#000000; --text-color:#2e1a0a; --text-color-dark:#4d7518;}
 #index_page {margin-top:0 !important;}
 .page-wrapper a {text-decoration:none;}
 .page-wrapper a:hover {text-decoration:none;}
 .page-wrapper section {padding:100px 0; position:relative; z-index:0;}
-.page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {margin:0; padding:0; font-family: "Vidaloka", serif; line-height:1.2;}
-.page-wrapper p {margin:0; padding:0; font-size:26px; font-family: "Inter", sans-serif; font-weight:500; line-height:1.5;}
-.page-wrapper h1 {color:var(--color-light); font-size:75px; line-height:1.1; font-weight:400;}
-.page-wrapper h2 {color:var(--html-secondary); font-size:45px; font-weight:500; text-transform:uppercase; letter-spacing:5px; font-family: "Inter", sans-serif;}
+.page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {margin:0; padding:0; font-family:"Oswald",sans-serif; line-height:1.2; text-transform:uppercase;}
+.page-wrapper p {margin:0; padding:0; font-size:26px; font-family:"Markazi Text", serif; font-weight:500; line-height:1.5;}
+.page-wrapper h1 {font-size:80px;}
+.page-wrapper h2 {font-size:70px;}
+.page-wrapper h3 {font-size:60px;}
 
 @media(min-width:1200px) {.page-wrapper .container {max-width: 1140px;}}
 @media(min-width:1500px) {.page-wrapper .container {max-width: 1440px;}}
 
+
 /* ======================================== BUTTON STYLES ====================================== */
 
-.page-wrapper .order-btn {position:relative; display:inline-flex; align-items:center; gap:15px; padding:12px 22px; border:1px solid rgba(255,255,255,.7); border-radius:8px; color:var(--color-light); text-decoration:none; overflow:hidden; transition:.4s;}
-.page-wrapper .order-btn span {position:relative; z-index:2; font-size:18px; font-weight:600;}
-.page-wrapper .btn-icon {position:relative; z-index:2; color:var(--html-secondary); font-size:24px;}
-.page-wrapper .btn-icon small {position:absolute; right:-8px; bottom:-7px; font-size:14px; font-weight:700;}
-.page-wrapper .order-btn::before {content:""; position:absolute; left:-100%; top:0; width:100%; height:100%; background:var(--html-secondary); transition:.5s;}
-.page-wrapper .order-btn:hover::before {left:0;}
-.page-wrapper .order-btn:hover {color:var(--html-primary-dark); text-decoration:none;}
-.page-wrapper .order-btn:hover .btn-icon {color:var(--html-primary-dark);}
+.page-wrapper .order-btn {position:relative; display:inline-flex; align-items:center; gap:12px; padding:12px 18px; border-radius:50px; background:#537d19; color:var(--color-light); text-decoration:none; font-size:16px; font-weight:700; text-transform:uppercase; overflow:hidden; transition:transform .35s ease, box-shadow .35s ease;}
+.page-wrapper .order-btn:before {content:""; position:absolute; top:0; left:-100%; width:70%; height:100%; background:rgba(255,255,255,.25); transform:skewX(-25deg); transition:left .5s ease;}
+.page-wrapper .btn-icon {background-color:var(--color-light); padding:10px; border-radius:50%; width:40px; height:40px;}
+.page-wrapper .order-btn:hover:before {left:130%;}
+.page-wrapper .order-btn:hover {transform:translateY(-5px); box-shadow:0 8px 0 var(--html-dark-primary), 0 15px 25px rgba(83,125,25,.25);}
+.page-wrapper .order-btn:active {transform:translateY(1px); box-shadow:0 2px 0 var(--html-dark-primary);}
 
-/* ======================================== Custom CSS ====================================== */
+/* ======================================== Custome CSS ====================================== */
 
 /* 1st Section Start */
-.page-wrapper .thaivista-hero-section {padding-top:50px; position:relative;}
-.page-wrapper .shadows {position:absolute; top:0; filter:var(--color-filter);}
-.page-wrapper .left-shadow {width:850px; height:1500px; left:0; opacity:0.5;}
-.page-wrapper .right-shadow {right:0; width:900px; height:900px; opacity:0.7;}
-.page-wrapper .thaivista-hero-content {text-align:center; width:75%; margin:auto;}
-.page-wrapper .thaivista-hero-content p {width:75%; margin:10px auto 30px; color:var(--color-light); font-size:20px; line-height:2; font-weight:400;}
-.page-wrapper .thaivista-hero-visual {position:relative;}
-.page-wrapper .thaivista-main-bowl {position:relative; max-width:680px; left:0; right:0; display:flex; margin:auto; transform:rotate(8deg); filter:drop-shadow(2px 4px 6px var(--color-dark));}
-.page-wrapper .thaivista-onion-bowl {position:absolute; right:230px; top:270px; width:250px; filter:drop-shadow(2px 4px 6px var(--color-dark));}
-.page-wrapper .thaivista-sesame-particles {position:absolute; left:145px; top:20px; width:230px; filter:drop-shadow(2px 4px 6px var(--color-dark));}
-.page-wrapper .thaivista-main-bowl {transition:.6s ease;}
+
+.page-wrapper .breakfast-hero-box{position:relative;}
+.page-wrapper .breakfast-hero-content{position:relative;z-index:2;padding:10px 0 10px 5px;}
+.page-wrapper .breakfast-hero-subtitle{display:flex;align-items:center;gap:15px;margin-bottom:18px;color:var(--html-secondary);}
+.page-wrapper .breakfast-hero-subtitle span{font-size:30px;font-family:"Pacifico",cursive; text-transform: uppercase;}
+.page-wrapper .breakfast-hero-subtitle i{font-size:38px;}
+.page-wrapper .breakfast-hero-content h1{max-width:450px;margin:0;color:var(--text-color);font-size:54px;line-height:1.2;font-weight:800;text-transform:uppercase;}
+.page-wrapper .breakfast-hero-content h1 span{display:block;color:var(--text-color-dark);}
+.page-wrapper .breakfast-hero-content p{width: 85%; margin:25px 0;color:var(--text-color);font-size:19px;line-height:1.55;}
+.page-wrapper .breakfast-hero-image{position:relative; transform: scale(1.1);}
+.page-wrapper .breakfast-hero-image img{filter: drop-shadow(1px 2px 4px var(--color-dark));}
+
 /* 1st Section End */
 
 /* 2nd Section Start */
-.page-wrapper .thaiessence-about-box {text-align:center; padding:30px 60px 50px; border:2px solid rgba(255,255,255,0.8); border-radius:30px; position:relative;}
-.page-wrapper p {color:var(--color-light); font-size:21px; line-height:42px; margin:12px 0 30px; font-weight:400;}
+
+.page-wrapper .breakfast-steps-box{position:relative;width:100%;padding:55px 40px;border-radius:20px;background:var(--html-dark-primary);box-shadow:0 8px 25px rgba(0,0,0,.06);}
+.page-wrapper .breakfast-steps-box .row{position:relative;}
+.page-wrapper .breakfast-step-item{display:flex;align-items:center;justify-content:center;gap:22px;min-height:90px;transition:transform .4s ease;}
+.page-wrapper .breakfast-step-item:hover{transform:translateY(-4px);}
+.page-wrapper .breakfast-step-icon{flex:0 0 74px;width:74px;height:74px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#dce7b4;color:var(--html-dark-primary);font-size:29px;transition:all .4s ease;}
+.page-wrapper .breakfast-step-item:hover .breakfast-step-icon{transform:rotate(-8deg) scale(1.08);background:var(--html-light-primary);}
+.page-wrapper .breakfast-step-content{flex:1;}
+.page-wrapper .breakfast-step-content h3{font-size:24px;line-height:1.2;font-weight:700;text-transform:uppercase; color: var(--color-light);}
+.page-wrapper .breakfast-step-content p{font-size: 22px; width: 80%; line-height: 1.5; margin: 5px 0; color: var(--color-light)}
+.page-wrapper .breakfast-step-arrow{position:absolute;top:50%;display:flex;align-items:center;width:45px;color:var(--html-dark-primary);transform:translateY(-50%);z-index:2;}
+.page-wrapper .breakfast-step-arrow span{width:27px;border-top:1px dashed var(--html-dark-primary);}
+.page-wrapper .breakfast-step-arrow i{margin-left:3px;font-size:15px;}
+.page-wrapper .breakfast-step-arrow:nth-of-type(2){left:28%;}
+.page-wrapper .breakfast-step-arrow:nth-of-type(4){left:62%;}
+.page-wrapper .breakfast-steps-heading{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:25px;}
+.page-wrapper .breakfast-steps-heading h2{color:var(--color-light);font-family:"Oswald",sans-serif;font-size:36px;line-height:1.1;font-weight:700;text-transform:uppercase;white-space:nowrap; margin-bottom: 15px;}
+.page-wrapper .breakfast-steps-heading i{color:var(--html-secondary);font-size:22px;flex:0 0 auto;}
+.page-wrapper .breakfast-steps-heading-line{position:relative;width:65px;height:3px;flex:0 0 65px;overflow:hidden;}
+.page-wrapper .breakfast-steps-heading-line:before{content:"";position:absolute;top:0;left:50%;width:35px;height:3px;border-radius:5px;background:var(--html-secondary);transform:translateX(-50%);animation:breakfast-line-animation 2s ease-in-out infinite;}
+.page-wrapper .breakfast-steps-heading-line:last-child:before{animation-delay:.35s;}
+@keyframes breakfast-line-animation{
+    0%,100%{width:30px;}
+    50%{width:65px;}
+}
+
 /* 2nd Section End */
 
 /* 3rd Section Start */
-.page-wrapper .thaimaster-menu-section {position:relative; padding:45px 0 120px !important;}
-.page-wrapper .thaimaster-menu-section::before {content:""; position:absolute; top:7px; right:0; width:75%; height:85%; background-color:var(--html-primary-dark);}
-.page-wrapper .thaimaster-featured-image {width:100%; border-radius:220px 220px 0 0; display:block; transition:.8s; height:520px; object-fit:cover; border:2px solid var(--color-light);}
-.page-wrapper .thaimaster-featured-dish:hover .thaimaster-featured-image {transform:scale(1.05);}
-.page-wrapper .thaimaster-featured-label {position:absolute; left:0; right:0; margin:auto; bottom:30px; background:var(--html-secondary); color:var(--color-dark); display:flex; align-items:center; justify-content:space-between; gap:15px; padding:12px 17px; font-size:22px; font-weight:600; width:fit-content; border:2px solid var(--color-light);}
-.page-wrapper .thaimaster-featured-label .cart-img {filter:invert(1);}
-.page-wrapper .thaimaster-menu-content h2 {text-align:center; color:var(--html-secondary); font-size:45px; font-weight:500; margin:30px 0; text-transform:capitalize;}
-.page-wrapper .thaimaster-menu-content h3 {text-align:center; color:var(--color-light); font-size:40px; font-weight:500; margin:30px 0 40px; line-height:1.2;}
-.page-wrapper .thaimaster-menu-card {transition:.5s;}
-.page-wrapper .thaimaster-image-box {overflow:hidden; border:2px solid rgb(255 255 255);}
-.page-wrapper .thaimaster-image-box img {width:100%; height:250px; object-fit:cover; transition:.8s;}
-.page-wrapper .thaimaster-menu-card:hover .thaimaster-image-box img {transform:scale(1.12);}
-.page-wrapper .thaimaster-card-footer {display:flex; align-items:center; justify-content:space-between; margin-top:12px; padding:10px;}
-.page-wrapper .thaimaster-card-footer span {color:var(--color-light); font-size:28px; font-weight:500;}
-.page-wrapper .thaimaster-menu-card {position:relative;}
-.page-wrapper .thaimaster-menu-card::before {content:""; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #e5b40f; opacity:0; transform:scale(.9); transition:.5s; pointer-events:none;}
-.page-wrapper .thaimaster-menu-card:hover::before {opacity:1; transform:scale(1);}
-.page-wrapper .thaimaster-menu-card:hover {transform:translateY(-12px);}
-.page-wrapper .cart-img {filter:brightness(0) saturate(100%) invert(73%) sepia(54%) saturate(3586%) hue-rotate(10deg) brightness(110%) contrast(97%); max-width:25px;}
+
+.page-wrapper .swiper-bg {background-color:#faf4eb; padding:40px 50px 40px; border-radius:30px;}
+.page-wrapper .swiper-area {position:relative;}
+.page-wrapper .zentro-gallery-slider {overflow:hidden; border-radius:30px; padding:40px 0 10px;}
+.page-wrapper .swiper-heading {display:flex; justify-content:center; align-items:center; margin-bottom:45px;}
+.page-wrapper .swiper-heading h2 {font-size:58px; font-weight:700; line-height:1; color:var(--html-primary-dark); text-transform:uppercase; margin:0 10px;}
+.page-wrapper .swiper-heading img {width:50px;}
+.page-wrapper .fa-mosaic {max-width:80px; font-size:32px;}
+.page-wrapper .leaf-rotate {transform:rotateY(180deg);}
+.page-wrapper .swiper-heading-line {width:110px; height:2px; margin:0 20px; background:var(--html-primary-light);}
+.page-wrapper .swiper-slide {background:var(--color-light); border-radius:20px; overflow:hidden; transition:.4s ease;}
+.page-wrapper .swiper-slide a{color: var(--color-dark);}
+.page-wrapper .swiper-image {position:relative; overflow:hidden;}
+.page-wrapper .swiper-image img {width:100%; height:260px; object-fit:cover; transition:.45s ease;}
+.page-wrapper .swiper-content {display:flex; justify-content:space-between; align-items:center; padding:22px;}
+.page-wrapper .swiper-content h3 {margin:0; width:75%; font-size:22px; line-height:34px; color:var(--html-primary-dark); text-transform:uppercase;}
+.page-wrapper .swiper-cart {width:50px; height:50px; border-radius:50%; background:var(--html-dark-primary); display:flex; justify-content:center; align-items:center; transition:.35s ease;}
+.page-wrapper .swiper-cart img {width:25px; filter:invert(1);}
+.page-wrapper .swiper-slide {position:relative;}
+.page-wrapper .swiper-slide::before {content:""; position:absolute; inset:0; border-radius:20px; border:2px solid transparent; transition:.4s ease; pointer-events:none;}
+.page-wrapper .swiper-slide:hover {transform:translateY(-12px);}
+.page-wrapper .swiper-slide:hover::before {border-color:var(--html-primary-light);}
+.page-wrapper .swiper-slide:hover .swiper-image img {transform:scale(1.08);}
+.page-wrapper .swiper-content h3 {transition:.35s;}
+.page-wrapper .swiper-slide:hover .swiper-content h3 {color:var(--html-primary-light);}
+.page-wrapper .swiper-prev, .page-wrapper .swiper-next {width:45px; height:45px; border-radius:50%; background:var(--html-primary-light); display:flex; justify-content:center; align-items:center; position:absolute; top:45%;}
+.page-wrapper .swiper-prev {left:-48px;}
+.page-wrapper .swiper-next {right:-48px;}
+.page-wrapper .swiper-prev::after, .page-wrapper .swiper-next::after {font-size:22px; font-weight:700; color:var(--color-light);}
+.page-wrapper .swiper-prev:hover, .page-wrapper .swiper-next:hover {background:var(--text-green);}
+.page-wrapper .swiper-prev:hover::after, .page-wrapper .swiper-next:hover::after {color:var(--color-dark);}
+.page-wrapper .swiper-pagination {position:relative; margin-top:35px;}
+.page-wrapper .swiper-pagination-bullet {width:10px; height:10px; background:var(--html-light-primary); opacity:1; transition:0.3s ease;}
+.page-wrapper .swiper-pagination-bullet-active {background:var(--html-dark-primary) !important; transform:scale(1.5);}
+.page-wrapper .swiper-slide, .page-wrapper .swiper-image img, .page-wrapper .swiper-content h3 {transition:.4s ease;}
+.page-wrapper .breakfast-swiper-heading{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:25px;}
+.page-wrapper .breakfast-swiper-heading h2{color:var(--html-dark-primary);font-family:"Oswald",sans-serif;font-size:36px;line-height:1.1;font-weight:700;text-transform:uppercase;white-space:nowrap; margin-bottom: 15px;}
+.page-wrapper .breakfast-swiper-heading i{color:var(--html-secondary);font-size:22px;flex:0 0 auto;}
+.page-wrapper .breakfast-swiper-heading-line{position:relative;width:65px;height:3px;flex:0 0 65px;overflow:hidden;}
+.page-wrapper .breakfast-swiper-heading-line:before{content:"";position:absolute;top:0;left:50%;width:35px;height:3px;border-radius:5px;background:var(--html-secondary);transform:translateX(-50%);animation:breakfast-line-animation 2s ease-in-out infinite;}
+.page-wrapper .breakfast-swiper-heading-line:last-child:before{animation-delay:.35s;}
+@keyframes breakfast-line-animation{
+    0%,100%{width:30px;}
+    50%{width:65px;}
+}
 /* 3rd Section End */
 
 /* 4th Section Start */
-.page-wrapper .thailume-features-section {position:relative;}
-.page-wrapper .thailume-features-img {position: absolute; z-index: -1; left: 0; right: 0; margin: auto; top: -150px; filter: invert(1); opacity: 0.3; width: 100%; height: 440px;}
-.page-wrapper .thailume-features-box {border:2px solid rgba(255,255,255,.85); border-radius:30px; padding:40px 45px; backdrop-filter:blur(4px); position:relative; overflow:hidden;}
-.page-wrapper .thailume-feature-item {display:flex; align-items:center; gap:22px; transition:.4s ease; position:relative; padding:12px; transition:.45s ease;}
-.page-wrapper .thailume-feature-icon {flex-shrink:0;}
-.page-wrapper .thailume-feature-icon img {width:95px; transition:.4s ease;}
-.page-wrapper .thailume-feature-content h3 {color:var(--color-light); font-size:28px; font-weight:700; margin-bottom:8px; line-height:1.2;}
-.page-wrapper .thailume-feature-content p {color:var(--color-light); font-size:18px; line-height:28px; margin-bottom:0;}
-.page-wrapper .icon-one {filter:invert(1);}
-.page-wrapper .icon-two {filter:brightness(0) saturate(100%) invert(72%) sepia(19%) saturate(5587%) hue-rotate(9deg) brightness(108%) contrast(97%);}
-.page-wrapper .icon-three {filter:invert(1);}
-.page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:var(--html-secondary);}
-.page-wrapper .thailume-feature-highlight.two .thailume-feature-content h3 {color:var(--color-light);}
-.page-wrapper .thailume-feature-item:hover {transform:translateY(-8px);}
-.page-wrapper .thailume-feature-item::before {content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--html-secondary); transition:.45s ease;}
-.page-wrapper .thailume-feature-item:hover::before {width:100%;}
-.page-wrapper .thailume-feature-item:hover .thailume-feature-icon img {transform:rotate(-8deg) scale(1.1);}
-.page-wrapper .aurathai-recipe-section {position:relative;}
+
+.page-wrapper .breakfast-coffee-section {position:relative; min-height:560px; display:flex; align-items:center; overflow:hidden; border-radius:35px; background-image:url("https://public.touch2success.com/static/4e8b5c4ac57f440678dda28ece00d0cf/img/1788142263phpJyXkWb.jpg"); background-size:cover; background-position:center;}
+.page-wrapper .breakfast-coffee-section::before {content:""; position:absolute; inset:0; background:rgba(0,0,0,.38); z-index:1;}
+.page-wrapper .breakfast-coffee-section .container {position:relative; z-index:2;}
+.page-wrapper .breakfast-coffee-content {width:650px; margin:0 auto; padding:40px 50px; border:1px solid rgba(255,255,255,.55); border-radius:30px; background:rgba(250, 248, 241, .90); box-shadow:0 20px 50px rgba(0, 0, 0, .28); text-align:center; backdrop-filter:blur(5px);}
+.page-wrapper .breakfast-coffee-content h2 {margin:0; color:#21170f; font-family:"Oswald", sans-serif; font-size:48px; line-height:1.05; font-weight:700; text-transform:uppercase;}
+.page-wrapper .breakfast-coffee-content h2 span {display:block; color:#537d19;}
+.page-wrapper .breakfast-coffee-divider {display:flex; align-items:center; justify-content:center; gap:12px; margin:20px 0;}
+.page-wrapper .breakfast-coffee-divider span {width:70px; height:1px; background:#537d19;}
+.page-wrapper .breakfast-coffee-divider i {color:#537d19; font-size:18px;}
+.page-wrapper .breakfast-coffee-content p {max-width:560px; margin:0 auto 30px; color:#21170f; font-size:17px; line-height:1.6;}
+.page-wrapper .breakfast-coffee-features {display:flex; align-items:center; justify-content:center; gap:30px;}
+.page-wrapper .breakfast-coffee-feature {display:flex; align-items:center; gap:10px; text-align:left;}
+.page-wrapper .breakfast-coffee-feature-icon {display:flex; align-items:center; justify-content:center; width:48px; height:48px; flex:0 0 48px; border-radius:50%; background:#537d19; color:#fff;}
+.page-wrapper .breakfast-coffee-feature-icon i {font-size:19px;}
+.page-wrapper .breakfast-coffee-feature-text strong {display:block; color:#21170f; font-size:14px; line-height:1.2; font-weight:700;}
+.page-wrapper .breakfast-coffee-feature-text span {display:block; color:#537d19; font-size:14px; line-height:1.2; font-weight:600;}
+
 /* 4th Section End */
 
 /* 5th Section Start */
-.page-wrapper .aurathai-recipe-box {border:2px solid rgba(255,255,255,.75); border-radius:30px; overflow:hidden;}
-.page-wrapper .aurathai-content-area {padding:0 0 0 50px;}
-.page-wrapper .aurathai-content-area h2 {color:var(--html-secondary); font-size:40px; line-height:1.3; font-weight:500; letter-spacing:2px; font-family:"Vidaloka", serif; text-transform:none;}
-.page-wrapper .aurathai-content-area p {color:var(--color-light); font-size:21px; line-height:1.8; font-weight:200; margin:20px auto 30px;}
-.page-wrapper .aurathai-image-wrapper {position:relative; height:100%; overflow:hidden; border-radius:28px; border:2px solid rgba(255,255,255,.75);}
-.page-wrapper .aurathai-main-image {width:100%; height:570px; object-fit:cover; transition:1s ease;}
+
+.page-wrapper .breakfast-fresh-box{position:relative;overflow:hidden;padding:35px 40px;border:1px solid #e1ddd4;border-radius:20px;background:#faf8f1;box-shadow:0 8px 25px rgba(0,0,0,.06);}
+.page-wrapper .breakfast-fresh-content{padding:10px 10px 10px 5px;}
+.page-wrapper .breakfast-fresh-content h2{max-width:500px;margin:0;color:#21170f;font-family:"Oswald",sans-serif;font-size:52px;line-height:1.05;font-weight:700;text-transform:uppercase;}
+.page-wrapper .breakfast-fresh-content h2 span{color:var(--html-secondary);}
+.page-wrapper .breakfast-fresh-divider{display:flex;align-items:center;gap:10px;margin:20px 0;}
+.page-wrapper .breakfast-fresh-divider i{color:var(--html-secondary);font-size:18px;}
+.page-wrapper .breakfast-fresh-divider span{display:block;width:75px;height:1px;background:var(--html-secondary);}
+.page-wrapper .breakfast-fresh-content p{max-width:450px;margin:0 0 30px;color:#21170f;font-size:18px;line-height:1.6;}
+.page-wrapper .breakfast-fresh-button{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border-radius:30px;background:var(--html-secondary);color:var(--color-light);text-decoration:none;font-size:16px;font-weight:700;text-transform:uppercase;transition:all .35s ease;}
+.page-wrapper .breakfast-fresh-button i{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--color-light);color:var(--html-secondary);font-size:12px;transition:transform .35s ease;}
+.page-wrapper .breakfast-fresh-button:hover{background:var(--html-dark-primary);color:var(--color-light);transform:translateY(-3px);box-shadow:0 10px 20px rgba(83,125,25,.25);}
+.page-wrapper .breakfast-fresh-button:hover i{transform:translateX(4px);}
+.page-wrapper .breakfast-fresh-gallery{display:grid;grid-template-columns:2fr 2fr;grid-template-rows:245px 245px;gap:5px;width:100%;height:495px;}
+.page-wrapper .breakfast-gallery-card{overflow:hidden;border-radius:18px;}
+.page-wrapper .breakfast-gallery-card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.page-wrapper .breakfast-gallery-card:hover img{transform:scale(1.06);}
+.page-wrapper .breakfast-gallery-one{grid-column:1;grid-row:1;}
+.page-wrapper .breakfast-gallery-two{grid-column:2;grid-row:1;}
+.page-wrapper .breakfast-gallery-three{grid-column:1;grid-row:2;}
+.page-wrapper .breakfast-gallery-four{grid-column:2;grid-row:2;}
+
 /* 5th Section End */
 
-/* 6th Section Start */
-.page-wrapper .thaiflow-info-section {padding-bottom:70px;}
-.page-wrapper .thaiflow-content-area {position:relative; min-height:280px;}
-.page-wrapper .thaiflow-content-box {position:absolute; top:0; left:0; width:100%; opacity:0; visibility:hidden; transform:translateY(30px); transition:.5s;}
-.page-wrapper .thaiflow-content-box.active {opacity:1; visibility:visible; transform:translateY(0);}
-.page-wrapper .thaiflow-content-box h2 {color:var(--html-secondary); font-size:42px; font-family:"Vidaloka", serif; text-transform:none; letter-spacing:1px;}
-.page-wrapper .thaiflow-content-box p {color:var(--color-light); font-size:20px; line-height:42px; margin:15px 0;}
-.page-wrapper .thaiflow-icon-group {display:flex; align-items:center; justify-content:center; gap:45px; height:100%;}
-.page-wrapper .thaiflow-icon-card {width:150px; height:150px; background:var(--color-light); border-radius:6px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:.4s; position:relative; overflow:hidden;}
-.page-wrapper .thaiflow-icon-card img {width:110px; transition:.4s;}
-.page-wrapper .thaiflow-icon-card.active {background:var(--html-secondary); transform:translateY(-12px) scale(1.2);}
-.page-wrapper .thaiflow-icon-card:hover {transform:translateY(-10px) scale(1.2);}
-.page-wrapper .thaiflow-icon-card::before {content:""; position:absolute; width:0; height:100%; left:0; top:0; background:rgba(255,255,255,.15); transition:.4s;}
-.page-wrapper .thaiflow-icon-card:hover::before {width:100%;}
-.mobileBlock {
-        display: none;
-    }
-/* 6th Section End */
-
-/* 7th Section Start */
-.page-wrapper .thaigallery-section {position:relative;}
-.page-wrapper .thaigallery-section::before {content:''; position:absolute; bottom:0; left:0; width:100%; height:100%; background:linear-gradient(0deg, rgb(106 146 158) 0%, rgba(255, 255, 255, 0) 42%);}
-.page-wrapper .thaigallery-left-card {margin-top:80px;}
-.page-wrapper .thaigallery-bottom-card.one {margin-top:60px;}
-.page-wrapper .thaigallery-left-card img {width:100%; height:260px; object-fit:cover;}
-.page-wrapper .thaigallery-center-card {position:relative; z-index:2;}
-.page-wrapper .thaigallery-center-card img {width:100%; height:560px; object-fit:cover;}
-.page-wrapper .thaigallery-content-wrap h2 {color:var(--html-secondary); font-size:38px; letter-spacing:1px; line-height:1.15; margin:20px 0 50px; font-family:"Vidaloka", serif; text-transform:none; margin-left:60px;}
-.page-wrapper .thaigallery-bottom-card img {width:100%; height:260px; object-fit:cover;}
-.page-wrapper .thaigallery-left-card h4, .page-wrapper .thaigallery-center-card h4, .page-wrapper .thaigallery-bottom-card h4 {color:var(--color-light); text-align:center; font-size:20px; margin-top:15px; font-family:"Inter", sans-serif;}
-.page-wrapper .thaigallery-left-card img, .page-wrapper .thaigallery-center-card img, .page-wrapper .thaigallery-bottom-card img {transition:.5s;}
-.page-wrapper .thaigallery-left-card:hover img, .page-wrapper .thaigallery-center-card:hover img, .page-wrapper .thaigallery-bottom-card:hover img {transform:translateY(-10px);}
-/* 7th Section End */
+/* ===================================== ANIMATION-READY STATES ===================================== */
+/* Prevents native FOUC/flash before GSAP sets the "from" state on first paint.
+   GSAP overrides all of this inline once it runs, and if JS ever fails to load
+   the content is still fully visible (no permanent opacity:0 in the stylesheet). */
+.page-wrapper .gsap-mask{overflow:hidden;}
+.page-wrapper .breakfast-gallery-card img{will-change:transform;}
+.page-wrapper .breakfast-hero-image img{will-change:transform;}
 
 /* ======================================== Responsive CSS ====================================== */
 
 @media (max-width:1499px)
 {
-    .page-wrapper section {padding:90px 0;}
-    .page-wrapper h1 {font-size:62px;}
-    .page-wrapper h2 {font-size:42px;}
-    .page-wrapper .thaimaster-menu-content h2 {font-size:40px; letter-spacing:3px;}
-    .page-wrapper .thaimaster-menu-content h3 {font-size:35px;}
-    .page-wrapper .thaimaster-featured-label {padding:10px 13px; font-size:19px;}
-    .page-wrapper .cart-img {max-width:22px;}
-    .page-wrapper .thailume-feature-content h3 {font-size:22px;}
-    .page-wrapper .thailume-feature-content p {font-size:16px;}
-    .page-wrapper .aurathai-content-area h2 {font-size:35px;}
-    .page-wrapper .aurathai-content-area p {font-size:18px;}
-    .page-wrapper .order-btn {padding:9px 19px;}
-    .page-wrapper .thaigallery-content-wrap h2 {font-size:30px;}
-    .page-wrapper p {font-size:20px; line-height:38px;}
-    .page-wrapper .thaivista-hero-content {width:85%;}
-    .page-wrapper .thaivista-main-bowl {max-width:530px;}
-    .page-wrapper .thaivista-onion-bowl {width:160px; right:210px; top:210px;}
-    .page-wrapper .thaivista-sesame-particles {width:160px; left:130px;}
-    .page-wrapper .left-shadow {width:720px;}
-    .page-wrapper .right-shadow {width:760px;}
-    .page-wrapper .thaimaster-featured-image {height:480px;}
-    .page-wrapper .thaimaster-card-footer span {font-size:21px;}
-    .page-wrapper .aurathai-main-image {height:520px;}
-    .page-wrapper .thaiflow-icon-card {width:135px; height:135px;}
-    .page-wrapper .thaiflow-icon-card img {width:95px;}
-    .page-wrapper .thaigallery-center-card img {height:520px;}
-    .page-wrapper .thaimaster-menu-section::before {width:82%;}
-    .page-wrapper .thaimaster-card-footer {padding: 7px;}
-    .page-wrapper .thailume-features-img {top: -140px;}
+    .page-wrapper .container {max-width:1140px;}
+    .page-wrapper .breakfast-hero-content h1 {font-size:52px;}
+    .page-wrapper .breakfast-hero-content p {width:90%; font-size:18px;}
+    .page-wrapper .breakfast-hero-subtitle span {font-size:28px;}
+    .page-wrapper .breakfast-hero-subtitle i {font-size:35px;}
+    .page-wrapper .breakfast-steps-box {padding:50px 30px;}
+    .page-wrapper .breakfast-step-item {gap:18px;}
+    .page-wrapper .breakfast-step-content h3 {font-size:22px;}
+    .page-wrapper .breakfast-step-content p {width:90%; font-size:20px;}
+    .page-wrapper .swiper-bg {padding:35px 40px;}
+    .page-wrapper .swiper-heading h2 {font-size:54px;}
+    .page-wrapper .swiper-image img {height:240px;}
+    .page-wrapper .swiper-content {padding:20px;}
+    .page-wrapper .swiper-content h3 {font-size:20px; line-height:30px;}
+    .page-wrapper .breakfast-coffee-content {width:600px;}
+    .page-wrapper .breakfast-coffee-content h2 {font-size:40px;}
+    .page-wrapper .breakfast-coffee-content p {font-size:17px;}
+    .page-wrapper .breakfast-fresh-box {padding:30px;}
+    .page-wrapper .breakfast-fresh-content h2 {font-size:48px;}
+    .page-wrapper .breakfast-fresh-content p {font-size:17px;}
+    .page-wrapper .breakfast-fresh-gallery {grid-template-rows:220px 220px; height:445px;}
+    .page-wrapper .breakfast-swiper-heading {margin-bottom:0;}
 }
 
 @media (max-width:1199px)
 {
-    .page-wrapper h1 {font-size:50px;}
-    .page-wrapper h2 {font-size:36px; letter-spacing:3px;}
-    .page-wrapper p {font-size:18px; line-height:34px;}
-    .page-wrapper .thaivista-hero-content {width:95%;}
-    .page-wrapper .thaivista-hero-content p {width:80%; font-size:18px;}
-    .page-wrapper .thaivista-main-bowl {max-width:460px;}
-    .page-wrapper .thaivista-onion-bowl {width:150px; right:170px; top:210px;}
-    .page-wrapper .thaivista-sesame-particles {width:130px; left:120px;}
-    .page-wrapper .thaiessence-about-box {padding:30px 40px 45px;}
-    .page-wrapper .thaimaster-featured-image {height:420px;}
-    .page-wrapper .thaimaster-menu-content h2 {font-size:38px;}
-    .page-wrapper .thaimaster-menu-content h3 {font-size:30px;}
-    .page-wrapper .thaimaster-image-box img {height:220px;}
-    .page-wrapper .thaimaster-card-footer span {font-size:15px;}
-    .page-wrapper .thailume-feature-item {gap:9px;}
-    .page-wrapper .thailume-features-box {padding:15px;}
-    .page-wrapper .thailume-feature-icon img {width:70px;}
-    .page-wrapper .thailume-feature-content h3 {font-size:22px;}
-    .page-wrapper .aurathai-content-area {padding-left:30px;}
-    .page-wrapper .aurathai-content-area h2 {font-size:30px;}
-    .page-wrapper .aurathai-content-area p {font-size:15px;}
-    .page-wrapper .thaiflow-content-box h2 {font-size:38px;}
-    .page-wrapper .aurathai-main-image {height:480px;}
-    .page-wrapper .thaiflow-icon-group {gap:25px;}
-    .page-wrapper .thailume-feature-content p {font-size:14px;}
-    .page-wrapper .thaiflow-content-box p {font-size:18px; line-height:34px;}
-    .page-wrapper .thaiflow-icon-card {width:120px; height:120px;}
-    .page-wrapper .thaiflow-icon-card img {width:80px;}
-    .page-wrapper .thaigallery-content-wrap h2 {font-size:27px; margin:20px 0 30px 30px;}
-    .page-wrapper .thaimaster-menu-section::before {width:82%;}
-    .page-wrapper .thaigallery-center-card img {height:460px;}
-    .page-wrapper .thaigallery-bottom-card.one {margin-top:40px;}
-    .page-wrapper .thailume-features-img {height:390px;}
-    .page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:#ffffff;}
-    .page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:var(--html-secondary);}
+    .page-wrapper section {padding:80px 0;}
+    .page-wrapper .breakfast-hero-content {padding:10px 0;}
+    .page-wrapper .breakfast-hero-subtitle {gap:10px;}
+    .page-wrapper .breakfast-hero-subtitle span {font-size:25px;}
+    .page-wrapper .breakfast-hero-subtitle i {font-size:31px;}
+    .page-wrapper .breakfast-hero-content h1 {font-size:46px;}
+    .page-wrapper .breakfast-hero-content p {width:95%; margin:20px 0; font-size:17px;}
+    .page-wrapper .breakfast-steps-box {padding:45px 25px;}
+    .page-wrapper .breakfast-steps-heading {gap:12px;}
+    .page-wrapper .breakfast-steps-heading h2 {font-size:33px;}
+    .page-wrapper .breakfast-steps-heading-line {width:55px; flex:0 0 55px;}
+    .page-wrapper .breakfast-step-item {gap:12px;}
+    .page-wrapper .breakfast-step-icon {flex:0 0 65px; width:65px; height:65px; font-size:25px;}
+    .page-wrapper .breakfast-step-content h3 {font-size:20px;}
+    .page-wrapper .breakfast-step-content p {width:100%; font-size:18px;}
+    .page-wrapper .breakfast-step-arrow:nth-of-type(2) {left:27%;}
+    .page-wrapper .breakfast-step-arrow:nth-of-type(4) {left:61%;}
+    .page-wrapper .swiper-bg {padding:30px 35px;}
+    .page-wrapper .zentro-gallery-slider {padding:30px 0 10px;}
+    .page-wrapper .swiper-image img {height:230px;}
+    .page-wrapper .swiper-content {padding:17px;}
+    .page-wrapper .swiper-content h3 {font-size:19px; line-height:27px;}
+    .page-wrapper .swiper-cart {width:45px; height:45px;}
+    .page-wrapper .swiper-cart img {width:23px;}
+    .page-wrapper .breakfast-coffee-content {width:560px; padding:25px;}
+    .page-wrapper .breakfast-coffee-content h2 {font-size:38px;}
+    .page-wrapper .breakfast-coffee-content p {font-size:17px;}
+    .page-wrapper .breakfast-coffee-features {gap:25px;}
+    .page-wrapper .breakfast-fresh-box {padding:30px;}
+    .page-wrapper .breakfast-fresh-content {padding:5px;}
+    .page-wrapper .breakfast-fresh-content h2 {font-size:43px;}
+    .page-wrapper .breakfast-fresh-content p {font-size:16px;}
+    .page-wrapper .breakfast-fresh-gallery {grid-template-rows:200px 200px; height:405px;}
 }
 
 @media (max-width:991px)
 {
     .page-wrapper section {padding:70px 0;}
-    .page-wrapper h1 {font-size:45px;}
-    .page-wrapper h2 {font-size:32px;}
-    .page-wrapper .thaivista-main-bowl {max-width:400px;}
-    .page-wrapper .thaivista-onion-bowl {width:110px; right:100px; top:170px;}
-    .page-wrapper .thaivista-sesame-particles {width:110px; left:60px;}
-    .page-wrapper .thaimaster-featured-image {height:360px;}
-    .page-wrapper .thaimaster-image-box img {height:180px;}
-    .page-wrapper .thaimaster-card-footer span {font-size:11px;}
-    .page-wrapper .cart-img {max-width:18px;}
-    .page-wrapper .thaimaster-card-footer {padding:0 3px 6px;}
-    .page-wrapper .thailume-feature-item {gap:14px;}
-    .page-wrapper .thailume-feature-icon img {width:60px;}
-    .page-wrapper .thailume-feature-content h3 {font-size:20px;}
-    .page-wrapper .thailume-feature-content p {font-size:15px; line-height:24px;}
-    .page-wrapper .aurathai-content-area h2 {font-size:21px;}
-    .page-wrapper .aurathai-content-area p {font-size:13px; margin:10px auto 20px;}
-    .page-wrapper .order-btn span {font-size:17px;}
-    .page-wrapper .order-btn {padding:7px 16px;}
-    .page-wrapper .aurathai-main-image {height:420px;}
-    .page-wrapper .thaiflow-content-box h2 {font-size:34px;}
-    .page-wrapper .thaiflow-content-box p {font-size:14px; line-height:34px;}
-    .page-wrapper .thaiflow-icon-card {width:100px; height:100px;}
-    .page-wrapper .thaimaster-menu-content h3 {font-size:24px;}
-    .page-wrapper .thaiflow-icon-card img {width:65px;}
-    .page-wrapper .thaiflow-info-section {padding-bottom:20px;}
-    .page-wrapper .thaigallery-content-wrap h2 {font-size:20px;}
-    .page-wrapper .thaigallery-center-card img {height:370px;}
-    .page-wrapper .thaimaster-menu-section::before {height:86%; top:9px;}
-    .page-wrapper .thaigallery-bottom-card.one {margin-top:30px;}
-    .page-wrapper .thaimaster-menu-section {padding:0 0 60px !important;}
-    .page-wrapper .thaigallery-left-card h4, .page-wrapper .thaigallery-center-card h4, .page-wrapper .thaigallery-bottom-card h4 {font-size:17px;}
-    .page-wrapper .thaigallery-left-card img, .page-wrapper .thaigallery-bottom-card img {height:200px;}
-    .page-wrapper .thaimaster-featured-label {padding:9px 10px; font-size:15px;}
-    .page-wrapper .thailume-features-img {height:490px; top: -170px;}
-    .page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:#ffffff;}
-    .page-wrapper .icon-two {filter:invert(1);}
-    .page-wrapper .thailume-feature-highlight.two .thailume-feature-content h3 {color:var(--html-secondary);}
-    .page-wrapper .icon-three {filter:brightness(0) saturate(100%) invert(72%) sepia(19%) saturate(5587%) hue-rotate(9deg) brightness(108%) contrast(97%);}
+    .page-wrapper .breakfast-hero-content {padding:10px 15px;}
+    .page-wrapper .breakfast-hero-subtitle {gap:10px; margin-bottom:15px;}
+    .page-wrapper .breakfast-hero-subtitle span {font-size:20px;}
+    .page-wrapper .breakfast-hero-subtitle i {font-size:28px;}
+    .page-wrapper .breakfast-hero-content h1 {font-size:33px;}
+    .page-wrapper .breakfast-hero-content p {width:100%; font-size:16px; line-height:1.5;}
+    .page-wrapper .breakfast-hero-image {text-align:center;}
+    .page-wrapper .breakfast-hero-image img {max-width:100%;}
+    .page-wrapper .breakfast-steps-box {padding:40px 10px;}
+    .page-wrapper .breakfast-steps-heading {gap:10px; margin-bottom:15px;}
+    .page-wrapper .breakfast-steps-heading h2 {font-size:30px;}
+    .page-wrapper .breakfast-steps-heading-line {width:50px; flex:0 0 50px;}
+    .page-wrapper .breakfast-step-item {gap:10px;}
+    .page-wrapper .breakfast-step-icon {flex:0 0 58px; width:58px; height:58px; font-size:22px;}
+    .page-wrapper .breakfast-step-content h3 {font-size:18px;}
+    .page-wrapper .breakfast-step-content p {font-size:14px;}
+    .page-wrapper .breakfast-step-arrow {width:35px;}
+    .page-wrapper .breakfast-step-arrow span {width:20px;}
+    .page-wrapper .breakfast-step-arrow i {font-size:12px;}
+    .page-wrapper .swiper-bg {padding:30px 25px; border-radius:25px;}
+    .page-wrapper .breakfast-swiper-heading {gap:10px;}
+    .page-wrapper .breakfast-swiper-heading h2 {font-size:30px;}
+    .page-wrapper .breakfast-swiper-heading-line {width:50px; flex:0 0 50px;}
+    .page-wrapper .swiper-image img {height:250px;}
+    .page-wrapper .swiper-content {padding:15px;}
+    .page-wrapper .swiper-content h3 {width:70%; font-size:18px; line-height:25px;}
+    .page-wrapper .swiper-cart {width:42px; height:42px;}
+    .page-wrapper .swiper-cart img {width:21px;}
+    .page-wrapper .swiper-prev {left:-25px;}
+    .page-wrapper .swiper-next {right:-25px;}
+    .page-wrapper .breakfast-coffee-section {min-height:450px; border-radius:30px;}
+    .page-wrapper .breakfast-coffee-content {width:600px; max-width:90%; padding:30px;}
+    .page-wrapper .breakfast-coffee-content h2 {font-size:36px;}
+    .page-wrapper .breakfast-coffee-content p {font-size:17px;}
+    .page-wrapper .breakfast-coffee-features {gap:20px;}
+    .page-wrapper .breakfast-coffee-feature {gap:10px;}
+    .page-wrapper .breakfast-coffee-feature i {font-size:22px;}
+    .page-wrapper .breakfast-coffee-feature span {font-size:15px;}
+    .page-wrapper .breakfast-fresh-box {padding:25px;}
+    .page-wrapper .breakfast-fresh-content {padding:5px;}
+    .page-wrapper .breakfast-fresh-content h2 {font-size:30px;}
+    .page-wrapper .breakfast-fresh-content p {font-size:14px;}
+    .page-wrapper .breakfast-fresh-gallery {grid-template-rows:180px 180px; height:365px;}
+    .page-wrapper .breakfast-gallery-card {border-radius:15px;}
 }
 
 @media (max-width:767px)
 {
-    .page-wrapper h1 {font-size:37px;}
-    .page-wrapper h2 {font-size:28px;}
-    .page-wrapper p {font-size:14px; line-height:30px; margin:12px 0 20px;}
-    .page-wrapper .thaivista-hero-content {width:100%;}
-    .page-wrapper .thaivista-main-bowl {max-width:420px;}
-    .page-wrapper .thaivista-onion-bowl {width:110px; right:20px; top:230px;}
-    .page-wrapper .thaivista-sesame-particles {width:100px; left:-10px; top:-20px;}
-    .page-wrapper .thaiessence-about-box {padding:25px;}
-    .page-wrapper .thailume-features-box {padding:25px;}
-    .page-wrapper .aurathai-content-area {padding:50px 20px; text-align:center;}
-    .page-wrapper .thaiflow-info-section {padding-bottom:0;}
-    .page-wrapper .thaiflow-content-area {min-height:230px;}
-    .page-wrapper .thaiflow-content-box {text-align:center;}
-    .page-wrapper .aurathai-content-area h2 {font-size:26px;}
-    .page-wrapper .thaiflow-icon-group {gap:15px;}
-    .page-wrapper .thaiflow-icon-card {width:85px; height:85px;}
-    .page-wrapper .thaiflow-icon-card img {width:55px;}
-    .page-wrapper .thaigallery-content-wrap h2 {font-size:28px; bottom:330px; position:relative; text-align:center;}
-    .page-wrapper .thaivista-hero-content p {width:100%; font-size:16px; line-height:1.8;}
-    .page-wrapper .thailume-features-img {height:540px; top: -140px;}
-    .page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:var(--html-secondary);}
-    .page-wrapper .thailume-feature-highlight.two .thailume-feature-content h3 {color:var(--color-light);}
-    .page-wrapper .icon-two {filter:brightness(0) saturate(100%) invert(72%) sepia(19%) saturate(5587%) hue-rotate(9deg) brightness(108%) contrast(97%);}
-    .page-wrapper .icon-three {filter:invert(1);}
-    .page-wrapper .thaigallery-bottom-card.one {margin-top:0;}
-    .page-wrapper .thaigallery-left-card img, .page-wrapper .thaigallery-bottom-card img {height:100%;}
-    .page-wrapper .thaigallery-center-card img {height:100%;}
-    .page-wrapper .thaigallery-card {margin-top:160px;}
-    .page-wrapper .thaigallery-content-wrap {position:relative; margin-top:-80px;}
-    .page-wrapper .thaigallery-left-card h4, .page-wrapper .thaigallery-center-card h4, .page-wrapper .thaigallery-bottom-card h4 {font-size:22px;}
-    .page-wrapper .thaimaster-card-footer span {font-size:18px;}
-    .page-wrapper .thaimaster-featured-image {max-width:350px; margin:auto;}
-    .page-wrapper .thaimaster-menu-section::before {display:none;}
-    .page-wrapper .thaimaster-menu-section {padding:0 0 20px !important;}
-    .page-wrapper .thaimaster-image-box img {height:220px;}
-  
+    .page-wrapper section {padding:60px 0;}
+    .page-wrapper .breakfast-hero-section {padding:45px 0 60px;}
+    .page-wrapper .breakfast-hero-content {padding:10px 20px 20px; text-align:center;}
+    .page-wrapper .breakfast-hero-subtitle {justify-content:center;}
+    .page-wrapper .breakfast-hero-subtitle span {font-size:25px;}
+    .page-wrapper .breakfast-hero-subtitle i {font-size:30px;}
+    .page-wrapper .breakfast-hero-content h1 {max-width:600px; margin:0 auto; font-size:48px;}
+    .page-wrapper .breakfast-hero-content p {width:90%; margin:20px auto; font-size:17px;}
+    .page-wrapper .breakfast-hero-content .order-btn {margin:10px auto;}
+    .page-wrapper .breakfast-hero-image {margin-top:15px; text-align:center;}
+    .page-wrapper .breakfast-steps-box {padding:35px 25px;}
+    .page-wrapper .breakfast-steps-heading {margin-bottom:20px;}
+    .page-wrapper .breakfast-steps-heading h2 {font-size:29px;}
+    .page-wrapper .breakfast-step-item {margin:10px 0; flex-direction:column; text-align:center;}
+    .page-wrapper .breakfast-step-content p {font-size:16px;}
+    .page-wrapper .breakfast-step-arrow {display:none;}
+    .page-wrapper .breakfast-step-icon {flex:0 0 62px; width:62px; height:62px;}
+    .page-wrapper .swiper-bg {padding:25px 25px;}
+    .page-wrapper .breakfast-swiper-heading {margin-bottom:15px;}
+    .page-wrapper .breakfast-swiper-heading h2 {font-size:29px;}
+    .page-wrapper .zentro-gallery-slider {padding:25px 0 5px;}
+    .page-wrapper .swiper-image img {height:300px;}
+    .page-wrapper .swiper-content {padding:17px;}
+    .page-wrapper .swiper-content h3 {font-size:20px; line-height:28px;}
+    .page-wrapper .swiper-prev, .page-wrapper .swiper-next {width:40px; height:40px;}
+    .page-wrapper .swiper-prev {left:-20px;}
+    .page-wrapper .swiper-next {right:-20px;}
+    .page-wrapper .breakfast-coffee-section {min-height:480px; border-radius:30px;}
+    .page-wrapper .breakfast-coffee-content {width:100%; max-width:650px; padding:35px 25px;}
+    .page-wrapper .breakfast-coffee-content h2 {font-size:38px;}
+    .page-wrapper .breakfast-coffee-content p {font-size:17px;}
+    .page-wrapper .breakfast-coffee-features {gap:20px;}
+    .page-wrapper .breakfast-coffee-feature {gap:8px;}
+    .page-wrapper .breakfast-coffee-feature i {font-size:22px;}
+    .page-wrapper .breakfast-coffee-feature span {font-size:14px;}
+    .page-wrapper .breakfast-fresh-box {padding:30px 25px;}
+    .page-wrapper .breakfast-fresh-content {padding:5px; text-align:center;}
+    .page-wrapper .breakfast-fresh-content h2 {max-width:600px; margin:auto; font-size:40px;}
+    .page-wrapper .breakfast-fresh-divider {justify-content:center;}
+    .page-wrapper .breakfast-fresh-content p {max-width:600px; margin:0 auto 25px; font-size:16px;}
+    .page-wrapper .breakfast-fresh-content .order-btn {margin:auto;}
+    .page-wrapper .breakfast-fresh-gallery {margin-top:30px; grid-template-rows:190px 190px; height:385px;}
 }
 
 @media (max-width:575px)
 {
-    .page-wrapper .mobileBlock { display: block; margin: 0 auto 10px; max-width: 100px; background-color: var(--color-light); padding: 10px; border-radius: 20px;}
-    .page-wrapper section {padding:60px 0;}
-    .page-wrapper h1 {font-size:27px; line-height:1.2;}
-    .page-wrapper h2 {font-size:24px; letter-spacing:2px;}
-    .page-wrapper p {font-size:16px; line-height:28px;}
-    .page-wrapper .thaimaster-featured-label {bottom:30px;}
-    .page-wrapper .thaimaster-card-footer {justify-content:center; gap:30px;}
-    .page-wrapper .thaimaster-card-footer span {font-size:22px;}
-    .page-wrapper .cart-img {max-width:22px;}
-    .page-wrapper .thaimaster-image-box img {height:280px;}
-    .page-wrapper .thaimaster-menu-content h2 {font-size:35px;}
-    .page-wrapper .thaivista-main-bowl {max-width:370px; width: 100%;}
-    .page-wrapper .thaivista-onion-bowl {width:70px; right:-5px; top:160px;}
-    .page-wrapper .thaivista-sesame-particles {width:70px; left:-10px; top:-30px;}
-    .page-wrapper .shadows {display:none;}
-    .page-wrapper .thaiessence-about-box {padding:20px; max-width: 370px; margin: auto;}
-    .page-wrapper .thaimaster-menu-section::before {display:none;}
-    .page-wrapper .thaimaster-featured-dish {margin-bottom:0;}
-    .page-wrapper .thaimaster-menu-card {margin-bottom:25px; max-width: 370px; margin: 0 auto 25px;}
-    .page-wrapper .thailume-feature-item {margin-bottom:20px; flex-direction: column; text-align: center;}
-    .page-wrapper .aurathai-content-area {padding:25px 10px;}
-    .page-wrapper .aurathai-main-image {height:320px;}
-    .page-wrapper .thaiflow-content-area {min-height:auto; margin-bottom:30px;}
-    .page-wrapper .thaiflow-content-box {position:relative; opacity:1; visibility:visible; transform:none; text-align:center; margin-top:0;}
-    .page-wrapper .thaiflow-icon-group {flex-wrap:wrap; justify-content:center;}
-    .page-wrapper .thaiflow-icon-card {width:90px; height:90px; display: none;}
-    .page-wrapper .thaigallery-left-card, .page-wrapper .thaigallery-bottom-card.one {max-width: 370px; margin: 0 auto 30px;}
-    .page-wrapper .thaigallery-center-card, .page-wrapper .thaigallery-left-card, .page-wrapper .thaigallery-bottom-card {max-width: 370px; margin: 0 auto 30px;}
-    .page-wrapper .thaimaster-menu-section {padding:10px 0 0px !important;}
-    .page-wrapper .thaigallery-section {padding-top:90px !important;}
-    .page-wrapper .thailume-features-img {height:850px; top:-160px; display:none;}
-    .page-wrapper .thailume-feature-icon img {width:50px;}
-    .page-wrapper .thailume-features-box {padding:10px; max-width: 370px; margin: auto;}
-    .page-wrapper .thaiflow-content-box h2 {font-size:30px;}
-    .page-wrapper .thaiflow-content-box p {font-size:16px; line-height:30px; margin: 15px auto; max-width: 290px;}
-    .page-wrapper .thaigallery-content-wrap h2 {margin:0 0 30px; font-size:19px; top:-700px; position:relative; text-align:center;}
-    .page-wrapper .thaigallery-left-card img, .page-wrapper .thaigallery-bottom-card img {height:280px;}
-    .page-wrapper .thaigallery-center-card img {height:280px;}
-    .page-wrapper .thaimaster-menu-content h3 {margin:0px 0 50px;}
-    .page-wrapper .thaiflow-icon-card.three {position:absolute; top:-370px;}
-    .page-wrapper .thaiflow-icon-card.two {position:absolute; top:-760px;}
-    .page-wrapper .thaiflow-icon-card.active {background:#ffffff; transform:unset; position:absolute; top:-1150px;}
-    .page-wrapper .thaigallery-card {max-width: 370px; margin: 0 auto 30px;}
-    .page-wrapper .thaigallery-content-wrap {margin-top:-75px;}
-    .page-wrapper .thaivista-hero-content p {max-width: 370px;}
-    .page-wrapper .aurathai-recipe-box{max-width: 370px; margin: auto;}
+    .page-wrapper section {padding:45px 0;}
+    .page-wrapper .breakfast-hero-section {padding:30px 0 45px;}
+    .page-wrapper .breakfast-hero-content {padding:5px 10px 15px;}
+    .page-wrapper .breakfast-hero-subtitle {gap:8px; margin-bottom:12px;}
+    .page-wrapper .breakfast-hero-subtitle span {font-size:18px;}
+    .page-wrapper .breakfast-hero-subtitle i {font-size:26px;}
+    .page-wrapper .breakfast-hero-content h1 {font-size:35px; line-height:1.05;}
+    .page-wrapper .breakfast-hero-content p {width:100%; margin:15px auto; font-size:15px; line-height:1.5; max-width:370px;}
+    .page-wrapper .breakfast-hero-image {margin-top:5px;}
+    .page-wrapper .order-btn {gap:8px; padding:9px 14px; font-size:14px;}
+    .page-wrapper .btn-icon {width:34px; height:34px; padding:8px;}
+    .page-wrapper .breakfast-steps-box {padding:25px 15px; border-radius:20px; max-width:370px; margin:auto;}
+    .page-wrapper .breakfast-steps-heading {gap:7px; margin-bottom:18px;}
+    .page-wrapper .breakfast-steps-heading h2 {font-size:26px; margin-bottom:8px;}
+    .page-wrapper .breakfast-steps-heading i {font-size:15px;}
+    .page-wrapper .breakfast-steps-heading-line {width:35px; flex:0 0 35px;}
+    .page-wrapper .breakfast-step-item {gap:10px; min-height:65px; justify-content:flex-start; margin:10px 0;}
+    .page-wrapper .breakfast-step-icon {flex:0 0 52px; width:52px; height:52px; font-size:19px;}
+    .page-wrapper .breakfast-step-content h3 {font-size:18px;}
+    .page-wrapper .breakfast-step-content p {font-size:14px; line-height:1.35; margin-top:3px;}
+    .page-wrapper .swiper-bg {padding:20px; border-radius:20px; max-width:370px;}
+    .page-wrapper .breakfast-swiper-heading {gap:7px; margin-bottom:10px;}
+    .page-wrapper .breakfast-swiper-heading h2 {font-size:26px; margin-bottom:8px;}
+    .page-wrapper .breakfast-swiper-heading i {font-size:15px;}
+    .page-wrapper .breakfast-swiper-heading-line {width:35px; flex:0 0 35px;}
+    .page-wrapper .zentro-gallery-slider {padding:20px 0 5px; border-radius:18px;}
+    .page-wrapper .swiper-image img {height:270px;}
+    .page-wrapper .swiper-content {padding:13px;}
+    .page-wrapper .swiper-content h3 {width:70%; font-size:17px; line-height:24px;}
+    .page-wrapper .swiper-cart {width:38px; height:38px;}
+    .page-wrapper .swiper-cart img {width:19px;}
+    .page-wrapper .swiper-prev, .page-wrapper .swiper-next {width:34px; height:34px; top:47%;}
+    .page-wrapper .swiper-prev {left:-10px;}
+    .page-wrapper .swiper-next {right:-10px;}
+    .page-wrapper .swiper-prev::after, .page-wrapper .swiper-next::after {font-size:15px;}
+    .page-wrapper .swiper-pagination {margin-top:18px;}
+    .page-wrapper .swiper-pagination-bullet {width:8px; height:8px;}
+    .page-wrapper .breakfast-coffee-section {min-height:450px; border-radius:22px;}
+    .page-wrapper .breakfast-coffee-content {width:100%; padding:28px 15px;}
+    .page-wrapper .breakfast-coffee-content h2 {font-size:31px; line-height:1.1;}
+    .page-wrapper .breakfast-coffee-divider {gap:7px; margin:10px 0 12px;}
+    .page-wrapper .breakfast-coffee-divider span {width:35px;}
+    .page-wrapper .breakfast-coffee-divider i {font-size:14px;}
+    .page-wrapper .breakfast-coffee-content p {font-size:15px; line-height:1.5; margin-bottom:18px;}
+    .page-wrapper .breakfast-coffee-features {gap:8px; justify-content:space-between;}
+    .page-wrapper .breakfast-coffee-feature {gap:5px; text-align:center; flex-direction:column;}
+    .page-wrapper .breakfast-coffee-feature i {font-size:19px;}
+    .page-wrapper .breakfast-coffee-feature span {font-size:11px; line-height:1.2;}
+    .page-wrapper .breakfast-fresh-section {padding:25px 0 45px;}
+    .page-wrapper .breakfast-fresh-box {padding:22px 12px; border-radius:15px; max-width:370px; margin:20px auto;}
+    .page-wrapper .breakfast-fresh-content {padding:0;}
+    .page-wrapper .breakfast-fresh-content h2 {font-size:30px; line-height:1.05;}
+    .page-wrapper .breakfast-fresh-divider {gap:7px; margin:14px 0;}
+    .page-wrapper .breakfast-fresh-divider i {font-size:15px;}
+    .page-wrapper .breakfast-fresh-divider span {width:55px;}
+    .page-wrapper .breakfast-fresh-content p {font-size:15px; line-height:1.5; margin-bottom:18px; max-width:370px;}
+    .page-wrapper .breakfast-gallery-card {border-radius:11px;}
+    .page-wrapper .breakfast-fresh-gallery {grid-template-columns:1fr; grid-template-rows:repeat(4,180px); height:auto;}
+    .page-wrapper .breakfast-gallery-one {grid-column:1; grid-row:1;}
+    .page-wrapper .breakfast-gallery-two {grid-column:1; grid-row:2;}
+    .page-wrapper .breakfast-gallery-three {grid-column:1; grid-row:3;}
+    .page-wrapper .breakfast-gallery-four {grid-column:1; grid-row:4;}
 }
 
 </style>
-
     <div class="page-wrapper">
 
         <!-- 1st Section -->
-        <section class="thaivista-hero-section pb-0">
-            <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786535436phpo3qgk9.png" class="img-fluid shadows left-shadow" alt="{TAKEAWAY NAME} Shadow">
-            <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786535436phpfiGd5x.png" class="img-fluid shadows right-shadow" alt="{TAKEAWAY NAME} Shadow">
+        <section class="breakfast-hero-section pb-0">
             <div class="container">
-                <div class="thaivista-hero-content">
-                    <h1>
-                        Savour the Rich Taste of <br>
-                        Thailand Anytime 
-                    </h1>
-                    <p>
-                        Welcome to {TAKEAWAY NAME}, where the vibrant essence of Thai cuisine comes alive in the heart of {TAKEAWAY TOWN}. Our talented chefs prepare every dish using authentic ingredients, fragrant herbs, and traditional recipes that celebrate the rich culinary heritage of Thailand.
-                    </p>
+                <div class="breakfast-hero-box">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-5 col-md-5 col-sm-12">
+                            <div class="breakfast-hero-content">
+                                <div class="breakfast-hero-subtitle">
+                                    <span>Good Morning!</span>
+                                    <i class="fa-regular fa-sun"></i>
+                                </div>
+                                <h1>Start Your Day <span>the English Way!</span></h1>
+                                <p>
+                                    Start your morning right with a delicious breakfast from {TAKEAWAY NAME} in {TAKEAWAY TOWN}. Whether you're grabbing a quick bite or treating yourself to a leisurely meal, our takeaway options bring fresh, tasty flavours to your doorstep.
+                                </p>
+                                <a href="/order-now" class="order-btn">
+                                    <span>Order Now</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12">
+                            <div class="breakfast-hero-image">
+                                <img src="https://public.touch2success.com/static/4e8b5c4ac57f440678dda28ece00d0cf/img/1787729438phpkXkn1x.png" class="img-fluid" alt="{TAKEAWAY NAME} Breakfast">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="thaivista-hero-visual">
-                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786510112php97smqD.png" alt="{TAKEAWAY NAME} Thai Noodles" class="thaivista-main-bowl">
-                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786509225phpDU1wlH.png" alt="{TAKEAWAY NAME} Green Onion Bowl" class="thaivista-onion-bowl">
-                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786509225php2hMJYO.png" alt="{TAKEAWAY NAME} Sesame" class="thaivista-sesame-particles">
-                </div>
-                <div id="offer-section" class="py-4 py-lg-5"></div>
             </div>
         </section>
 
         <!-- 2nd Section -->
-        <section class="pt-0">
+        <section class="breakfast-steps-section pt-0">
             <div class="container">
-                <div class="thaiessence-about-box">
-                    <h2>ABOUT US</h2>
-                    <p>
-                        At {TAKEAWAY NAME}, dining is about more than just great food — it's about experiencing the warmth and spirit of Thai hospitality. Relax in our inviting atmosphere while enjoying expertly prepared dishes that perfectly balance sweet, spicy, savoury, and tangy flavours. Whether you're joining us for a casual lunch, a family gathering, or a special evening out, every visit promises exceptional taste and genuine Thai-inspired comfort.
-                    </p>
-                    <a href="/order-now" class="order-btn">
-                        <span>Order Now</span>
-                        <div class="btn-icon">
-                            <i class="fas fa-shopping-bag"></i>
-                            <small>+</small>
+                <div id="offer-section" class="py-4 py-lg-5"></div>
+                <div class="breakfast-steps-box">
+                    <div class="breakfast-steps-heading">
+                        <div class="breakfast-steps-heading-line"></div>
+                        <i class="fa-solid fa-utensils"></i>
+                        <h2>How it works</h2>
+                        <i class="fa-solid fa-utensils"></i>
+                        <div class="breakfast-steps-heading-line"></div>
+                    </div>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="breakfast-step-item">
+                                <div class="breakfast-step-icon">
+                                    <i class="fa-solid fa-utensils"></i>
+                                </div>
+                                <div class="breakfast-step-content">
+                                    <h3>Pick a Dish</h3>
+                                    <p>Choose your favourite breakfast from our menu.</p>
+                                </div>
+                            </div>
                         </div>
-                    </a>
+                        <div class="breakfast-step-arrow">
+                            <span></span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="breakfast-step-item">
+                                <div class="breakfast-step-icon">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                </div>
+                                <div class="breakfast-step-content">
+                                    <h3>Make a Payment</h3>
+                                    <p>Pay safely and securely through multiple options.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="breakfast-step-arrow">
+                            <span></span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="breakfast-step-item">
+                                <div class="breakfast-step-icon">
+                                    <i class="fa-solid fa-truck"></i>
+                                </div>
+                                <div class="breakfast-step-content">
+                                    <h3>Fresh &amp; Delivery</h3>
+                                    <p>Enjoy fresh breakfast delivered hot and on time.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- 3rd Section -->
-        <section class="thaimaster-menu-section pt-0">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="thaimaster-featured-dish">
-                            <a href="/order-now">
-                            <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786594968php1AFsNY.jpg" alt="{TAKEAWAY NAME} Green Curry" class="thaimaster-featured-image img-fluid">
-                                <div class="thaimaster-featured-label">
-                                    <span>Green Curry</span>
-                                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786597444phpgLIzx9.png" class="img-fluid cart-img" alt="{TAKEAWAY NAME} Cart">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-12">
-                        <div class="thaimaster-menu-content">
-                            <h2>
-                                Our Menu
-                            </h2>
-                            <div class="row align-items-center justify-content-center">
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="thaimaster-menu-card">
-                                        <a href="/order-now">
-                                            <div class="thaimaster-image-box">
-                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786594968php3unWf6.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Red Curry">
-                                            </div>
-                                            <div class="thaimaster-card-footer">
-                                                <span>Red Curry</span>
-                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786597444phpgLIzx9.png" class="img-fluid cart-img" alt="{TAKEAWAY NAME} Cart">
-                                            </div>
-                                        </a>
+        <section class="pt-0">
+            <div class="container swiper-bg">
+                <div class="breakfast-swiper-heading">
+                    <div class="breakfast-swiper-heading-line"></div>
+                    <i class="fa-solid fa-utensils"></i>
+                    <h2>Breakfast favourite</h2>
+                    <i class="fa-solid fa-utensils"></i>
+                    <div class="breakfast-swiper-heading-line"></div>
+                </div>
+                <div class="swiper-area">
+                    <div class="swiper zentro-gallery-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="/order-now">
+                                    <div class="swiper-image">
+                                        <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1763734822phpfPHMP5.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Sandwich">
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="thaimaster-menu-card">
-                                        <a href="/order-now">
-                                            <div class="thaimaster-image-box">
-                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786594968phphPB4qo.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Stir-fried Noodles">
-                                            </div>
-                                            <div class="thaimaster-card-footer">
-                                                <span>Stir-fried Noodles</span>
-                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786597444phpgLIzx9.png" class="img-fluid cart-img" alt="{TAKEAWAY NAME} Cart">
-                                            </div>
-                                        </a>
+                                    <div class="swiper-content">
+                                        <h3>
+                                            Sandwich
+                                        </h3>
+                                        <div class="swiper-cart">
+                                            <img src="https://public.touch2success.com/static/4117608e14d900275b7ab3dabc38c1f9/img/1750778384phpmPyphe.png" alt="{TAKEAWAY NAME} Cart">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6 pt-sm-4 pt-md-0">
-                                    <div class="thaimaster-menu-card">
-                                        <a href="/order-now">
-                                            <div class="thaimaster-image-box">
-                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786594968phpNrbfCG.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Thai Fried Rice">
-                                            </div>
-                                            <div class="thaimaster-card-footer">
-                                                <span>Thai Fried Rice</span>
-                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786597444phpgLIzx9.png" class="img-fluid cart-img" alt="{TAKEAWAY NAME} Cart">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                            <h3>
-                                A True Taste of Thailand in Every Bite
-                            </h3>
+                            <div class="swiper-slide">
+                                <a href="/order-now">
+                                    <div class="swiper-image">
+                                        <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1774476058phpwCmlmP.png" class="img-fluid" alt="{TAKEAWAY NAME} Burgers">
+                                    </div>
+                                    <div class="swiper-content">
+                                        <h3>
+                                            Burgers
+                                        </h3>
+                                        <div class="swiper-cart">
+                                            <img src="https://public.touch2success.com/static/4117608e14d900275b7ab3dabc38c1f9/img/1750778384phpmPyphe.png" alt="{TAKEAWAY NAME} Cart">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/order-now">
+                                    <div class="swiper-image">
+                                        <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1742149592phpWgwkSy.png" class="img-fluid" alt="{TAKEAWAY NAME} Wraps">
+                                    </div>
+                                    <div class="swiper-content">
+                                        <h3>
+                                            Wraps
+                                        </h3>
+                                        <div class="swiper-cart">
+                                            <img src="https://public.touch2success.com/static/4117608e14d900275b7ab3dabc38c1f9/img/1750778384phpmPyphe.png" alt="{TAKEAWAY NAME} Cart">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/order-now">
+                                    <div class="swiper-image">
+                                        <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1748985750phppvfPQg.png" class="img-fluid" alt="{TAKEAWAY NAME} Omelette">
+                                    </div>
+                                    <div class="swiper-content">
+                                        <h3>
+                                            Omelette
+                                        </h3>
+                                        <div class="swiper-cart">
+                                            <img src="https://public.touch2success.com/static/4117608e14d900275b7ab3dabc38c1f9/img/1750778384phpmPyphe.png" alt="{TAKEAWAY NAME} Cart">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/order-now">
+                                    <div class="swiper-image">
+                                        <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1742149592php87lXTa.png" class="img-fluid" alt="{TAKEAWAY NAME} Fries">
+                                    </div>
+                                    <div class="swiper-content">
+                                        <h3>
+                                            Fries
+                                        </h3>
+                                        <div class="swiper-cart">
+                                            <img src="https://public.touch2success.com/static/4117608e14d900275b7ab3dabc38c1f9/img/1750778384phpmPyphe.png" alt="{TAKEAWAY NAME} Cart">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    <div class="swiper-prev swiper-button-prev"></div>
+                    <div class="swiper-next swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
 
         <!-- 4th Section -->
-        <section class="thailume-features-section pt-0">
+        <section class="breakfast-coffee-section">
             <div class="container">
-                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786706285phpbrF5GO.png" class="img-fluid thailume-features-img" alt="{TAKEAWAY NAME} Shadow">
-                <div class="thailume-features-box">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="thailume-feature-item">
-                                <div class="thailume-feature-icon">
-                                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786511008php7Cyv7t.png" class="img-fluid icon-one" alt="{TAKEAWAY NAME} Pick Icon">
-                                </div>
-                                <div class="thailume-feature-content">
-                                    <h3>Order in Seconds</h3>
-                                    <p>Find the perfect dish for any craving.</p>
-                                </div>
+                <div class="breakfast-coffee-content">
+                    <h2>
+                        Morning Delights
+                        <span>To Fuel Your Day!</span>
+                    </h2>
+                    <div class="breakfast-coffee-divider">
+                        <span></span>
+                        <i class="fa-solid fa-leaf"></i>
+                        <span></span>
+                    </div>
+                    <p>
+                        Busy morning? No problem! {TAKEAWAY NAME} in {TAKEAWAY TOWN} offers fresh, flavourful breakfast options for takeaway. Whether you need a quick bite before work or a leisurely brunch at home, our delicious morning dishes are made to order and ready when you are.
+                    </p>
+                    <div class="breakfast-coffee-features">
+                        <div class="breakfast-coffee-feature">
+                            <div class="breakfast-coffee-feature-icon">
+                                <i class="fa-solid fa-mug-hot"></i>
+                            </div>
+                            <div class="breakfast-coffee-feature-text">
+                                <strong>Hearty &amp;</strong>
+                                <span>Delicious</span>
                             </div>
                         </div>
-        
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="thailume-feature-item thailume-feature-highlight">
-                                <div class="thailume-feature-icon">
-                                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786511009phpaPqvYU.png" class="img-fluid icon-two" alt="{TAKEAWAY NAME} Checkout Icon">
-                                </div>
-                                <div class="thailume-feature-content">
-                                    <h3>Secure Checkout</h3>
-                                    <p>A seamless, stress-free way to pay.</p>
-                                </div>
+                        <div class="breakfast-coffee-feature">
+                            <div class="breakfast-coffee-feature-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div class="breakfast-coffee-feature-text">
+                                <strong>Freshly</strong>
+                                <span>Prepared</span>
                             </div>
                         </div>
-        
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="thailume-feature-item thailume-feature-highlight two">
-                                <div class="thailume-feature-icon">
-                                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786511009phphFIvPl.png" class="img-fluid icon-three" alt="{TAKEAWAY NAME} Fresh Icon">
-                                </div>
-                                <div class="thailume-feature-content">
-                                    <h3>Served Fresh</h3>
-                                    <p> Freshly made and good to go when you are.</p>
-                                </div>
+                        <div class="breakfast-coffee-feature">
+                            <div class="breakfast-coffee-feature-icon">
+                                <i class="fa-solid fa-utensils"></i>
+                            </div>
+                            <div class="breakfast-coffee-feature-text">
+                                <strong>Made for</strong>
+                                <span>Every Day</span>
                             </div>
                         </div>
                     </div>
@@ -510,127 +651,40 @@ body .page-wrapper, .resp-body #root .page-wrapper {margin:0; padding:0; box-siz
         </section>
 
         <!-- 5th Section -->
-        <section class="aurathai-recipe-section pt-0">
+        <section class="breakfast-fresh-section">
             <div class="container">
-                <div class="aurathai-recipe-box">
+                <div class="breakfast-fresh-box">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="aurathai-content-area">
-                                <h2>
-                                    Traditional Recipes Made with Premium Ingredients
-                                </h2>
+                        <div class="col-lg-5 col-md-5 col-sm-12">
+                            <div class="breakfast-fresh-content">
+                                <h2>Simple, Fresh, & <br> <span>Full of</span> Goodness!</h2>
+                                <div class="breakfast-fresh-divider">
+                                    <i class="fa-solid fa-leaf"></i>
+                                    <span></span>
+                                </div>
                                 <p>
-                                    Experience the perfect balance of sweet, savoury, spicy, and fragrant flavours with the takeaway service from {TAKEAWAY NAME}. Our menu offers a variety of delicious Thai dishes prepared fresh to order, making it easy to enjoy your favourite meals at home, at work, or on the go. Every bite captures the warmth, richness, and authenticity that make Thai cuisine so loved around the world.
+                                    A great day starts with a great breakfast! At {TAKEAWAY NAME} in {TAKEAWAY TOWN}, we prepare fresh, tasty breakfast dishes for takeaway. Whether you're in the mood for a classic favourite or something new, enjoy a wholesome, satisfying start to your day—wherever you are.
                                 </p>
-                                <a href="#" class="order-btn">
+                                <a href="/order-now" class="order-btn">
                                     <span>Order Now</span>
-                                    <div class="btn-icon">
-                                        <i class="fas fa-shopping-bag"></i>
-                                        <small>+</small>
-                                    </div>
+                                    <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 px-0">
-                            <div class="aurathai-image-wrapper">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786513344phptRWhzi.jpg" alt="{TAKEAWAY NAME} Pad Thai" class="aurathai-main-image img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6th Section -->
-        <section class="thaiflow-info-section pt-0">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="thaiflow-content-area">
-                            <div class="thaiflow-content-box one active" id="thaiflow-services">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584php88SlGD.png" class="img-fluid mobileBlock" alt="{TAKEAWAY NAME} Service Icon">
-                                <h2>Our Services:</h2>
-                                <p>
-                                    At {TAKEAWAY NAME}, we take pride in serving delicious food with fast takeaway service in {TAKEAWAY TOWN}. No matter the occasion or dietary need, we've got something for you. Find your new favourite meal today!
-                                </p>
-                            </div>
-                            <div class="thaiflow-content-box two" id="thaiflow-menu">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584phpudvaon.png" class="img-fluid mobileBlock" alt="{TAKEAWAY NAME} Menu Icon">
-                                <h2>Our Menu:</h2>
-                                <p>
-                                    Explore the latest takeaway menu in {TAKEAWAY TOWN} at {TAKEAWAY NAME}! From classic favourites to exciting new dishes, each meal is prepared fresh to order. Order online now and experience flavours you'll love!
-                                </p>
-                            </div>
-                            <div class="thaiflow-content-box three" id="thaiflow-hygiene">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584phpqswZ56.png" class="img-fluid mobileBlock" alt="{TAKEAWAY NAME} Hygiene Icon">
-                                <h2>Our Hygiene:</h2>
-                                <p>
-                                    At {TAKEAWAY NAME}, we maintain strict food safety standards to ensure your meal is freshly prepared in a clean environment. Our commitment to hygienic food takeaway means you can enjoy every bite with confidence.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="thaiflow-icon-group">
-                            <div class="thaiflow-icon-card one active" data-target="thaiflow-services">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584php88SlGD.png" class="img-fluid desktopBlock" alt="{TAKEAWAY NAME} Service Icon">
-                            </div>
-    
-                            <div class="thaiflow-icon-card two" data-target="thaiflow-menu">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584phpudvaon.png" class="img-fluid desktopBlock" alt="{TAKEAWAY NAME} Menu Icon">
-                            </div>
-    
-                            <div class="thaiflow-icon-card three" data-target="thaiflow-hygiene">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584phpqswZ56.png" class="img-fluid desktopBlock" alt="{TAKEAWAY NAME} Hygiene Icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7th Section -->
-        <section class="thaigallery-section pt-0">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-lg-3 col-md-3 col-sm-6">
-                        <a href="/order-now">
-                            <div class="thaigallery-left-card thaigallery-card">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786617054phpNiTqCi.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Chicken Soup">
-                                <h4>Chicken Soup</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6">
-                        <a href="/order-now">
-                            <div class="thaigallery-center-card thaigallery-card">
-                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786617054phptrY3dx.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Papaya Salad">
-                                <h4>Papaya Salad</h4>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <div class="thaigallery-content-wrap">
-                            <h2>
-                                Treat Yourself to Thailand's
-                                Most Loved Culinary Traditions
-                            </h2>
-                            <div class="row no-gutters">
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <a href="/order-now">
-                                        <div class="thaigallery-bottom-card one">
-                                            <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1755969730phpKpDD02.png" class="img-fluid" alt="{TAKEAWAY NAME} Spring Rolls">
-                                            <h4>Spring Rolls</h4>
-                                        </div>
-                                    </a>
+        
+                        <div class="col-lg-7 col-md-7 col-sm-12">
+                            <div class="breakfast-fresh-gallery">
+                                <div class="breakfast-gallery-card breakfast-gallery-one">
+                                    <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1761730178phpyAvMkT.png" class="img-fluid" alt="{TAKEAWAY NAME} Hot Chocolate">
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <a href="/order-now">
-                                        <div class="thaigallery-bottom-card">
-                                            <img src="https://assets.touch2success.com/static/feae73d1a026d6a4e8b40eda02286ebc/img/1698674677phppKdcxh.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Ramen">
-                                            <h4>Ramen</h4>
-                                        </div>
-                                    </a>
+                                <div class="breakfast-gallery-card breakfast-gallery-two">
+                                    <img src="https://assets.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1742992694php5SrHNy.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Jacket Potato">
+                                </div>
+                                <div class="breakfast-gallery-card breakfast-gallery-three">
+                                    <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1733918385phpzAPrun.png" class="img-fluid" alt="{TAKEAWAY NAME} Panini">
+                                </div>
+                                <div class="breakfast-gallery-card breakfast-gallery-four">
+                                    <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1742149592phpUGMlXo.png" class="img-fluid" alt="{TAKEAWAY NAME} Chicken Nuggets">
                                 </div>
                             </div>
                         </div>
@@ -641,455 +695,348 @@ body .page-wrapper, .resp-body #root .page-wrapper {margin:0; padding:0; box-siz
 
     </div>
 
-    <!-- Tab-switch logic for the "Our Services / Menu / Hygiene" flow cards.
-         Converted from <script> to <scriptold> since the CRM strips raw <script> tags. -->
+    <!-- =====================================================================================
+         MASTER ANIMATION SCRIPT
+         One consolidated load-chain: jQuery layout hooks run immediately (no gsap dependency),
+         then gsap -> ScrollTrigger -> SplitType load in order, and once all three are ready
+         every section's reveal is wired up, followed by the Swiper init (kept from your
+         original block) so the slider and the scroll animations never race each other.
+         Wrapped in <scriptold> because your CRM only accepts that tag.
+    ===================================================================================== -->
     <scriptold>
-        (function(){
-            var cards=document.querySelectorAll(".thaiflow-icon-card");
-            var contents=document.querySelectorAll(".thaiflow-content-box");
-        
-            cards.forEach(function(card){
-                card.onclick=function(){
-                    var target=card.getAttribute("data-target");
-        
-                    cards.forEach(function(item){
-                        item.classList.remove("active");
-                    });
-        
-                    contents.forEach(function(item){
-                        item.classList.remove("active");
-                    });
-        
-                    card.classList.add("active");
-        
-                    var content=document.getElementById(target);
-        
-                    if(content){
-                        content.classList.add("active");
-                    }
-                };
-            });
-        })();
-    </scriptold>
+    (function () {
 
-    <!-- ============================================================
-         GSAP + SplitType scroll-reveal animations
-         Tailored to this template's actual class names
-         (thaivista / thaiessence / thaimaster / thailume / aurathai / thaiflow / thaigallery).
-
-         NOTE: if a section doesn't animate on your CRM, the most common
-         fix is nudging the "start" value in cfg() below (e.g. 'top 85%'
-         -> 'top 95%') since header heights / CRM wrappers shift where
-         the trigger element enters the viewport.
-    ============================================================ -->
-    <scriptold>
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js", function () {
-      $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js", function () {
-        $.getScript("https://unpkg.com/split-type", function () {
-
-          gsap.registerPlugin(ScrollTrigger);
-
-          var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-          if (prefersReduced) { return; }
-
-          /* ============================================================
-             SMOOTH SCROLLER — finds the real CRM scroll container and
-             animates scrollTop manually via RAF for a buttery feel.
-          ============================================================ */
-          (function() {
-            function getScroller() {
-              var el = document.querySelector('.page-wrapper');
-              if (!el) return document.documentElement;
-              var p = el.parentElement;
-              while (p && p !== document.body && p !== document.documentElement) {
-                var s = window.getComputedStyle(p);
-                if (/auto|scroll/.test(s.overflow + s.overflowY) && p.scrollHeight > p.clientHeight) {
-                  return p;
-                }
-                p = p.parentElement;
-              }
-              return document.documentElement;
-            }
-
-            var scroller  = getScroller();
-            var target    = scroller.scrollTop;
-            var current   = scroller.scrollTop;
-            var ease      = 0.09;
-            var rafId     = null;
-            var isRunning = false;
-
-            function lerp(a, b, t) { return a + (b - a) * t; }
-
-            function tick() {
-              current = lerp(current, target, ease);
-              var diff = Math.abs(target - current);
-              if (diff < 0.5) { current = target; isRunning = false; return; }
-              scroller.scrollTop = current;
-              rafId = requestAnimationFrame(tick);
-            }
-
-            scroller.addEventListener('wheel', function(e) {
-              e.preventDefault();
-              var delta = e.deltaY;
-              if (e.deltaMode === 1) delta *= 30;
-              if (e.deltaMode === 2) delta *= 300;
-              target += delta * 1.2;
-              var maxScroll = scroller.scrollHeight - scroller.clientHeight;
-              target = Math.max(0, Math.min(target, maxScroll));
-              if (!isRunning) { isRunning = true; rafId = requestAnimationFrame(tick); }
-            }, { passive: false });
-
-            scroller.addEventListener('scroll', function() {
-              if (!isRunning) { target = scroller.scrollTop; current = scroller.scrollTop; }
-            });
-
-            if (scroller !== document.documentElement) {
-              ScrollTrigger.defaults({ scroller: scroller });
-            }
-            window.__pageScroller = scroller;
-          })();
-
-          /* Responsive trigger start points — adjust here if a CRM
-             header/margin pushes content and reveals fire too early/late. */
-          function cfg() {
-            var w = window.innerWidth;
-            if (w <= 575) return { start: 'top 88%' };
-            if (w <= 991) return { start: 'top 90%' };
-            return { start: 'top 82%' };
-          }
-
-          /* ============================================================
-             ① HERO — thaivista-hero-section
-          ============================================================ */
-          (function() {
-            var h1 = document.querySelector('.page-wrapper .thaivista-hero-content h1');
-            if (h1) {
-              var split = new SplitType(h1, { types: 'words' });
-              gsap.from(split.words, {
-                y: 60, opacity: 0,
-                rotateZ: function(i) { return (i % 2 === 0) ? -4 : 4; },
-                duration: 0.9, ease: 'expo.out',
-                stagger: { each: 0.07, from: 'start' }, delay: 0.15
-              });
-            }
-
-            gsap.from('.page-wrapper .thaivista-hero-content > p', {
-              y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.55
-            });
-
-            gsap.fromTo('.page-wrapper .shadows.left-shadow',
-              { opacity: 0, x: -60 }, { opacity: 0.5, x: 0, duration: 1.4, ease: 'power2.out', delay: 0.2 });
-            gsap.fromTo('.page-wrapper .shadows.right-shadow',
-              { opacity: 0, x: 60 }, { opacity: 0.7, x: 0, duration: 1.4, ease: 'power2.out', delay: 0.3 });
-
-            gsap.fromTo('.page-wrapper .thaivista-main-bowl',
-              { opacity: 0, scale: 0.8, rotate: -4, y: 60 },
-              { opacity: 1, scale: 1, rotate: 8, y: 0, duration: 1.1, ease: 'expo.out', delay: 0.35,
-                onComplete: function() {
-                  gsap.to('.page-wrapper .thaivista-main-bowl', { y: -12, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
-                }
-              }
-            );
-            gsap.fromTo('.page-wrapper .thaivista-onion-bowl',
-              { opacity: 0, y: 40, scale: 0.7 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(2)', delay: 0.6 });
-            gsap.fromTo('.page-wrapper .thaivista-sesame-particles',
-              { opacity: 0, y: -30, scale: 0.7 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(2)', delay: 0.75 });
-
-            gsap.fromTo('.page-wrapper #offer-section',
-              { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: 0.9 });
-          })();
-
-          /* ============================================================
-             ② ABOUT — thaiessence-about-box
-          ============================================================ */
-          (function() {
-            var sc = cfg();
-            var box = document.querySelector('.page-wrapper .thaiessence-about-box');
-            if (!box) return;
-
-            gsap.fromTo(box,
-              { opacity: 0, y: 50 },
-              { opacity: 1, y: 0, duration: 1, ease: 'power3.out',
-                scrollTrigger: { trigger: box, start: sc.start, toggleActions: 'play none none reverse' }
-              }
-            );
-
-            var h2 = box.querySelector('h2');
-            if (h2) {
-              var s2 = new SplitType(h2, { types: 'chars' });
-              gsap.from(s2.chars, {
-                y: 30, opacity: 0, duration: 0.5, ease: 'back.out(2)', stagger: 0.02,
-                scrollTrigger: { trigger: h2, start: 'top 85%', toggleActions: 'play none none reverse' }
-              });
-            }
-
-            var p = box.querySelector('p');
-            if (p) {
-              var sp = new SplitType(p, { types: 'words' });
-              gsap.from(sp.words, {
-                opacity: 0, y: 14, filter: 'blur(3px)', duration: 0.45, ease: 'power2.out', stagger: 0.015,
-                scrollTrigger: { trigger: p, start: 'top 88%', toggleActions: 'play none none reverse' }
-              });
-            }
-
-            var btn = box.querySelector('.order-btn');
-            if (btn) {
-              gsap.fromTo(btn, { scale: 0.6, opacity: 0 }, {
-                scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(3)',
-                scrollTrigger: { trigger: btn, start: 'top 95%', toggleActions: 'play none none reverse' },
-                onComplete: function() { gsap.set(btn, { clearProps: 'all' }); }
-              });
-            }
-          })();
-
-          /* ============================================================
-             ③ MENU — thaimaster-menu-section
-          ============================================================ */
-          (function() {
-            var sc = cfg();
-            var section = document.querySelector('.page-wrapper .thaimaster-menu-section');
-            if (!section) return;
-
-            var featuredImg = section.querySelector('.thaimaster-featured-image');
-            if (featuredImg) {
-              gsap.fromTo(featuredImg,
-                { clipPath: 'inset(100% 0 0 0)' },
-                { clipPath: 'inset(0% 0 0 0)', duration: 1.1, ease: 'power3.inOut',
-                  scrollTrigger: { trigger: featuredImg, start: sc.start, toggleActions: 'play none none reverse' }
-                }
-              );
-            }
-            var label = section.querySelector('.thaimaster-featured-label');
-            if (label) {
-              gsap.fromTo(label, { opacity: 0, y: 20 }, {
-                opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 0.4,
-                scrollTrigger: { trigger: section.querySelector('.thaimaster-featured-dish'), start: sc.start, toggleActions: 'play none none reverse' }
-              });
-            }
-
-            var h2 = section.querySelector('.thaimaster-menu-content h2');
-            if (h2) {
-              var s2 = new SplitType(h2, { types: 'words' });
-              gsap.from(s2.words, {
-                y: 45, opacity: 0, rotateX: -30, transformOrigin: 'top center',
-                duration: 0.7, ease: 'power3.out', stagger: 0.08,
-                scrollTrigger: { trigger: h2, start: sc.start, toggleActions: 'play none none reverse' }
-              });
-            }
-
-            var cardRow = section.querySelector('.thaimaster-menu-content .row');
-            var cards = section.querySelectorAll('.thaimaster-menu-card');
-            if (cards.length) {
-              gsap.fromTo(cards,
-                { opacity: 0, y: 60, scale: 0.9, rotate: -3 },
-                { opacity: 1, y: 0, scale: 1, rotate: 0, duration: 0.7, ease: 'back.out(1.6)', stagger: 0.15,
-                  scrollTrigger: { trigger: cardRow || cards[0], start: sc.start, toggleActions: 'play none none reverse' }
-                }
-              );
-            }
-
-            var h3 = section.querySelector('.thaimaster-menu-content h3');
-            if (h3) {
-              var s3 = new SplitType(h3, { types: 'words' });
-              gsap.from(s3.words, {
-                opacity: 0, y: 25, duration: 0.55, ease: 'power3.out', stagger: 0.05,
-                scrollTrigger: { trigger: h3, start: 'top 90%', toggleActions: 'play none none reverse' }
-              });
-            }
-          })();
-
-          /* ============================================================
-             ④ FEATURES — thailume-features-section
-          ============================================================ */
-          (function() {
-            var sc = cfg();
-            var section = document.querySelector('.page-wrapper .thailume-features-section');
-            if (!section) return;
-
-            var bgImg = section.querySelector('.thailume-features-img');
-            if (bgImg) {
-              gsap.to(bgImg, {
-                y: 60, ease: 'none',
-                scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 }
-              });
-            }
-
-            var box = section.querySelector('.thailume-features-box');
-            if (box) {
-              gsap.fromTo(box, { opacity: 0, y: 50, scale: 0.96 }, {
-                opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'power3.out',
-                scrollTrigger: { trigger: box, start: sc.start, toggleActions: 'play none none reverse' }
-              });
-            }
-
-            var items = section.querySelectorAll('.thailume-feature-item');
-            items.forEach(function(item, i) {
-              gsap.fromTo(item,
-                { opacity: 0, y: 35, x: i === 0 ? -30 : (i === 2 ? 30 : 0) },
-                { opacity: 1, y: 0, x: 0, duration: 0.6, ease: 'back.out(2)', delay: i * 0.12,
-                  scrollTrigger: { trigger: box || item, start: sc.start, toggleActions: 'play none none reverse' }
-                }
-              );
-              var icon = item.querySelector('.thailume-feature-icon img');
-              if (icon) {
-                gsap.fromTo(icon,
-                  { rotate: -20, scale: 0.6, opacity: 0 },
-                  { rotate: 0, scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(2.5)', delay: i * 0.12 + 0.15,
-                    scrollTrigger: { trigger: box || item, start: sc.start, toggleActions: 'play none none reverse' }
-                  }
-                );
-              }
-            });
-          })();
-
-          /* ============================================================
-             ⑤ RECIPE — aurathai-recipe-section
-          ============================================================ */
-          (function() {
-            var sc = cfg();
-            var section = document.querySelector('.page-wrapper .aurathai-recipe-section');
-            if (!section) return;
-
-            var area = section.querySelector('.aurathai-content-area');
-            if (area) {
-              var h2 = area.querySelector('h2');
-              if (h2) {
-                var s2 = new SplitType(h2, { types: 'lines,words' });
-                gsap.from(s2.words, {
-                  y: 40, opacity: 0, duration: 0.6, ease: 'power3.out', stagger: 0.03,
-                  scrollTrigger: { trigger: area, start: sc.start, toggleActions: 'play none none reverse' }
-                });
-              }
-              var p = area.querySelector('p');
-              if (p) {
-                var sp = new SplitType(p, { types: 'words' });
-                gsap.from(sp.words, {
-                  opacity: 0, y: 14, filter: 'blur(3px)', duration: 0.45, ease: 'power2.out', stagger: 0.012,
-                  scrollTrigger: { trigger: p, start: 'top 88%', toggleActions: 'play none none reverse' }
-                });
-              }
-              var btn = area.querySelector('.order-btn');
-              if (btn) {
-                gsap.fromTo(btn, { scale: 0.6, opacity: 0 }, {
-                  scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(3)',
-                  scrollTrigger: { trigger: btn, start: 'top 95%', toggleActions: 'play none none reverse' },
-                  onComplete: function() { gsap.set(btn, { clearProps: 'all' }); }
-                });
-              }
-            }
-
-            var imgWrap = section.querySelector('.aurathai-image-wrapper');
-            var img = section.querySelector('.aurathai-main-image');
-            if (imgWrap && img) {
-              gsap.fromTo(imgWrap,
-                { clipPath: 'inset(0 0 0 100%)' },
-                { clipPath: 'inset(0 0 0 0%)', duration: 1.1, ease: 'power3.inOut',
-                  scrollTrigger: { trigger: imgWrap, start: sc.start, toggleActions: 'play none none reverse' }
-                }
-              );
-              gsap.to(img, {
-                y: 0, ease: 'none',
-                scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 }
-              });
-            }
-          })();
-
-          /* ============================================================
-             ⑥ SERVICES / FLOW — thaiflow-info-section
-          ============================================================ */
-          (function() {
-            var sc = cfg();
-            var section = document.querySelector('.page-wrapper .thaiflow-info-section');
-            if (!section) return;
-
-            var area = section.querySelector('.thaiflow-content-area');
-            var activeBox = section.querySelector('.thaiflow-content-box.active');
-            if (activeBox && area) {
-              var h2 = activeBox.querySelector('h2');
-              if (h2) {
-                var s2 = new SplitType(h2, { types: 'chars' });
-                gsap.from(s2.chars, {
-                  y: 30, opacity: 0, duration: 0.4, ease: 'back.out(2)', stagger: 0.015,
-                  scrollTrigger: { trigger: area, start: sc.start, toggleActions: 'play none none reverse' }
-                });
-              }
-              var p = activeBox.querySelector('p');
-              if (p) {
-                var sp = new SplitType(p, { types: 'words' });
-                gsap.from(sp.words, {
-                  opacity: 0, y: 12, duration: 0.4, ease: 'power2.out', stagger: 0.01,
-                  scrollTrigger: { trigger: area, start: sc.start, toggleActions: 'play none none reverse' }
-                });
-              }
-            }
-            
-          })();
-
-          /* ============================================================
-             ⑦ GALLERY — thaigallery-section
-          ============================================================ */
-          (function() {
-            var sc = cfg();
-            var section = document.querySelector('.page-wrapper .thaigallery-section');
-            if (!section) return;
-
-            var h2 = section.querySelector('.thaigallery-content-wrap h2');
-            if (h2) {
-              var s2 = new SplitType(h2, { types: 'words' });
-              gsap.from(s2.words, {
-                opacity: 0, y: 35, duration: 0.55, ease: 'power3.out', stagger: 0.05,
-                scrollTrigger: { trigger: h2, start: sc.start, toggleActions: 'play none none reverse' }
-              });
-            }
-
-            var groups = [
-              { sel: '.thaigallery-left-card', from: { x: -40 } },
-              { sel: '.thaigallery-center-card', from: { y: 60 } },
-              { sel: '.thaigallery-bottom-card.one', from: { x: -30, y: 30 } },
-              { sel: '.thaigallery-bottom-card:not(.one)', from: { x: 30, y: 30 } }
-            ];
-            groups.forEach(function(g) {
-              var els = section.querySelectorAll(g.sel);
-              if (!els.length) return;
-              var fromVars = Object.assign({ opacity: 0, scale: 0.92 }, g.from);
-              gsap.fromTo(els, fromVars, {
-                opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', stagger: 0.12,
-                scrollTrigger: { trigger: els[0], start: sc.start, toggleActions: 'play none none reverse' }
-              });
-            });
-          })();
-
-          /* ============================================================
-             MAGNETIC ORDER BUTTONS (hover pop, all instances)
-          ============================================================ */
-          document.querySelectorAll('.page-wrapper .order-btn').forEach(function(btn) {
-            btn.addEventListener('mouseenter', function() { gsap.to(btn, { scale: 1.08, duration: 0.25, ease: 'power2.out' }); });
-            btn.addEventListener('mouseleave', function() { gsap.to(btn, { scale: 1, duration: 0.35, ease: 'elastic.out(1, 0.5)' }); });
-          });
-
-          /* Refresh triggers on resize (debounced) so start/end points
-             stay accurate when the CRM viewport / breakpoints change. */
-          var resizeTimer;
-          window.addEventListener('resize', function() {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(function() { ScrollTrigger.refresh(); }, 250);
-          });
-
-          setTimeout(function() { ScrollTrigger.refresh(); }, 350);
-
-        }); /* split-type */
-      }); /* ScrollTrigger */
-    }); /* gsap */
-    </scriptold>
-
-    <scriptold>
-        window.addEventListener("load", function(){
-        pageTopmargin();
-        });
+        /* ---------- layout hooks kept from your original template (no gsap needed) ---------- */
+        window.addEventListener("load", function () { pageTopmargin(); });
         pageTopmargin();
         function pageTopmargin() {
-        var headerHeight = $('#header').height();
-        $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
+            var headerHeight = $('#header').height();
+            if (headerHeight) $('#page-top-margin').css({ marginTop: headerHeight + 'px' });
         }
-        $("#banner_content").appendTo($("#offer-section"));
+        if ($("#banner_content").length) { $("#banner_content").appendTo($("#offer-section")); }
+
+        /* ---------- load gsap -> scrolltrigger -> splittype, then build everything ---------- */
+        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js", function () {
+        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js", function () {
+        $.getScript("https://unpkg.com/split-type", function () {
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            /* ============================================================
+               SMOOTH SCROLLER — finds the real scroll container the CRM
+               renders (could be a wrapper div, not always <html>), then
+               animates scrollTop by hand so it feels buttery in Chrome/Safari.
+            ============================================================ */
+            (function () {
+                function getScroller() {
+                    var el = document.querySelector('.page-wrapper');
+                    if (!el) return document.documentElement;
+                    var p = el.parentElement;
+                    while (p && p !== document.body && p !== document.documentElement) {
+                        var s = window.getComputedStyle(p);
+                        if (/auto|scroll/.test(s.overflow + s.overflowY) && p.scrollHeight > p.clientHeight) return p;
+                        p = p.parentElement;
+                    }
+                    return document.documentElement;
+                }
+
+                var scroller  = getScroller();
+                var target    = scroller.scrollTop;
+                var current   = scroller.scrollTop;
+                var ease      = 0.09;
+                var isRunning = false;
+
+                function lerp(a, b, t) { return a + (b - a) * t; }
+                function tick() {
+                    current = lerp(current, target, ease);
+                    if (Math.abs(target - current) < 0.5) { current = target; isRunning = false; return; }
+                    scroller.scrollTop = current;
+                    requestAnimationFrame(tick);
+                }
+
+                scroller.addEventListener('wheel', function (e) {
+                    e.preventDefault();
+                    var delta = e.deltaY;
+                    if (e.deltaMode === 1) delta *= 30;
+                    if (e.deltaMode === 2) delta *= 300;
+                    target += delta * 1.2;
+                    var maxScroll = scroller.scrollHeight - scroller.clientHeight;
+                    target = Math.max(0, Math.min(target, maxScroll));
+                    if (!isRunning) { isRunning = true; requestAnimationFrame(tick); }
+                }, { passive: false });
+
+                scroller.addEventListener('scroll', function () {
+                    if (!isRunning) { target = scroller.scrollTop; current = scroller.scrollTop; }
+                });
+
+                if (scroller !== document.documentElement) ScrollTrigger.defaults({ scroller: scroller });
+                window.__pageScroller = scroller;
+            })();
+
+            /* ============================================================
+               RESPONSIVE START POINT — matches the breakpoints already
+               used in this template's CSS (1499 / 1199 / 991 / 767 / 575)
+               so a section never triggers off-screen or too late on small
+               viewports.
+            ============================================================ */
+            function cfg() {
+                var w = window.innerWidth;
+                if (w <= 575)  return { start: 'top 94%' };
+                if (w <= 767)  return { start: 'top 90%' };
+                if (w <= 991)  return { start: 'top 87%' };
+                if (w <= 1199) return { start: 'top 84%' };
+                return { start: 'top 80%' };
+            }
+
+            /* ============================================================
+               ① HERO
+            ============================================================ */
+            (function () {
+                gsap.from('.page-wrapper .breakfast-hero-subtitle span, .page-wrapper .breakfast-hero-subtitle i', {
+                    x: -30, opacity: 0, duration: 0.6, ease: 'power3.out', stagger: 0.1, delay: 0.1
+                });
+
+                var h1 = document.querySelector('.page-wrapper .breakfast-hero-content h1');
+                if (h1) {
+                    var split = new SplitType(h1, { types: 'words' });
+                    gsap.from(split.words, {
+                        y: 55, opacity: 0,
+                        rotateZ: function (i) { return (i % 2 === 0) ? -4 : 4; },
+                        duration: 0.9, ease: 'expo.out',
+                        stagger: { each: 0.07, from: 'start' },
+                        delay: 0.25
+                    });
+                }
+
+                gsap.from('.page-wrapper .breakfast-hero-content > p', {
+                    y: 25, opacity: 0, duration: 0.7, ease: 'power3.out', delay: 0.7
+                });
+
+                gsap.fromTo('.page-wrapper .breakfast-hero-content > .order-btn',
+                    { scale: 0.6, opacity: 0 },
+                    { scale: 1, opacity: 1, duration: 0.55, ease: 'back.out(3)', delay: 0.9,
+                      onComplete: function () { gsap.set('.page-wrapper .breakfast-hero-content > .order-btn', { clearProps: 'all' }); } }
+                );
+
+                var heroImg = document.querySelector('.page-wrapper .breakfast-hero-image');
+                if (heroImg) {
+                    gsap.fromTo(heroImg,
+                        { x: 90, opacity: 0, rotate: 6, scale: 1.02 },
+                        { x: 0, opacity: 1, rotate: 0, scale: 1.1, duration: 1.1, ease: 'expo.out', delay: 0.35,
+                          onComplete: function () {
+                              /* gentle idle float once it has landed, keeps the hero alive */
+                              gsap.to(heroImg, { y: -14, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+                          } }
+                    );
+                }
+            })();
+
+            /* ============================================================
+               ② HOW IT WORKS (steps box)
+            ============================================================ */
+            (function () {
+                var sc = cfg();
+
+                gsap.from('.page-wrapper .breakfast-steps-heading-line, .page-wrapper .breakfast-steps-heading > i', {
+                    scale: 0, opacity: 0, duration: 0.5, ease: 'back.out(3)', stagger: 0.08,
+                    scrollTrigger: { trigger: '.page-wrapper .breakfast-steps-box', start: sc.start, toggleActions: 'play none none reverse' }
+                });
+
+                var stepsH2 = document.querySelector('.page-wrapper .breakfast-steps-heading h2');
+                if (stepsH2) {
+                    var stepsSplit = new SplitType(stepsH2, { types: 'words' });
+                    gsap.from(stepsSplit.words, {
+                        y: 30, opacity: 0, duration: 0.55, ease: 'power3.out', stagger: 0.06, delay: 0.1,
+                        scrollTrigger: { trigger: stepsH2, start: sc.start, toggleActions: 'play none none reverse' }
+                    });
+                }
+
+                gsap.utils.toArray('.page-wrapper .breakfast-step-item').forEach(function (item, i) {
+                    var icon = item.querySelector('.breakfast-step-icon');
+                    var content = item.querySelector('.breakfast-step-content');
+                    var tl = gsap.timeline({
+                        scrollTrigger: { trigger: item, start: sc.start, toggleActions: 'play none none reverse' },
+                        delay: i * 0.12
+                    });
+                    tl.fromTo(icon, { scale: 0, rotate: -160, opacity: 0 }, { scale: 1, rotate: 0, opacity: 1, duration: 0.55, ease: 'back.out(2.4)' })
+                      .fromTo(content, { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: 'power2.out' }, '-=0.3');
+                });
+
+                gsap.utils.toArray('.page-wrapper .breakfast-step-arrow').forEach(function (arrow, i) {
+                    gsap.fromTo(arrow, { opacity: 0, scale: 0.6, transformOrigin: 'left center' },
+                        { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out', delay: 0.4 + i * 0.15,
+                          scrollTrigger: { trigger: '.page-wrapper .breakfast-steps-box', start: sc.start, toggleActions: 'play none none reverse' } });
+                });
+            })();
+
+            /* ============================================================
+               ③ BREAKFAST FAVOURITE (swiper section)
+               Swiper duplicates slides for its loop, so we animate the
+               outer card container + heading here, and the Swiper init
+               (below) runs only after this has fired.
+            ============================================================ */
+            (function () {
+                var sc = cfg();
+
+                gsap.from('.page-wrapper .breakfast-swiper-heading-line, .page-wrapper .breakfast-swiper-heading > i', {
+                    scale: 0, opacity: 0, duration: 0.5, ease: 'back.out(3)', stagger: 0.08,
+                    scrollTrigger: { trigger: '.page-wrapper .swiper-bg', start: sc.start, toggleActions: 'play none none reverse' }
+                });
+
+                var swiperH2 = document.querySelector('.page-wrapper .breakfast-swiper-heading h2');
+                if (swiperH2) {
+                    var swSplit = new SplitType(swiperH2, { types: 'words' });
+                    gsap.from(swSplit.words, {
+                        y: 30, opacity: 0, duration: 0.55, ease: 'power3.out', stagger: 0.06, delay: 0.1,
+                        scrollTrigger: { trigger: swiperH2, start: sc.start, toggleActions: 'play none none reverse' }
+                    });
+                }
+
+                gsap.fromTo('.page-wrapper .swiper-area',
+                    { y: 60, opacity: 0, scale: 0.96 },
+                    { y: 0, opacity: 1, scale: 1, duration: 0.9, ease: 'expo.out', delay: 0.15,
+                      scrollTrigger: { trigger: '.page-wrapper .swiper-area', start: sc.start, toggleActions: 'play none none reverse' } }
+                );
+            })();
+
+            /* ============================================================
+               ④ MORNING DELIGHTS (coffee section, parallax bg)
+            ============================================================ */
+            (function () {
+                var sc = cfg();
+                var section = document.querySelector('.page-wrapper .breakfast-coffee-section');
+
+                if (section) {
+                    gsap.to(section, {
+                        backgroundPositionY: '65%', ease: 'none',
+                        scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 }
+                    });
+                }
+
+                gsap.fromTo('.page-wrapper .breakfast-coffee-content',
+                    { y: 70, opacity: 0, filter: 'blur(6px)' },
+                    { y: 0, opacity: 1, filter: 'blur(0px)', duration: 0.9, ease: 'power3.out',
+                      scrollTrigger: { trigger: '.page-wrapper .breakfast-coffee-content', start: sc.start, toggleActions: 'play none none reverse' } }
+                );
+
+                var coffeeH2 = document.querySelector('.page-wrapper .breakfast-coffee-content h2');
+                if (coffeeH2) {
+                    var coffeeSplit = new SplitType(coffeeH2, { types: 'words' });
+                    gsap.from(coffeeSplit.words, {
+                        y: 35, opacity: 0, duration: 0.6, ease: 'back.out(1.6)', stagger: 0.05, delay: 0.15,
+                        scrollTrigger: { trigger: coffeeH2, start: sc.start, toggleActions: 'play none none reverse' }
+                    });
+                }
+
+                gsap.from('.page-wrapper .breakfast-coffee-divider span', {
+                    scaleX: 0, transformOrigin: 'center', duration: 0.6, ease: 'power3.out', delay: 0.35,
+                    scrollTrigger: { trigger: '.page-wrapper .breakfast-coffee-divider', start: sc.start, toggleActions: 'play none none reverse' }
+                });
+
+                gsap.from('.page-wrapper .breakfast-coffee-content > p', {
+                    y: 18, opacity: 0, duration: 0.6, ease: 'power2.out', delay: 0.45,
+                    scrollTrigger: { trigger: '.page-wrapper .breakfast-coffee-content > p', start: 'top 92%', toggleActions: 'play none none reverse' }
+                });
+
+                gsap.utils.toArray('.page-wrapper .breakfast-coffee-feature').forEach(function (feat, i) {
+                    gsap.fromTo(feat, { y: 20, opacity: 0, scale: 0.8 },
+                        { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(2.2)', delay: 0.55 + i * 0.1,
+                          scrollTrigger: { trigger: '.page-wrapper .breakfast-coffee-features', start: sc.start, toggleActions: 'play none none reverse' } });
+                });
+            })();
+
+            /* ============================================================
+               ⑤ SIMPLE FRESH & FULL OF GOODNESS (gallery wipe reveal)
+            ============================================================ */
+            (function () {
+                var sc = cfg();
+
+                gsap.fromTo('.page-wrapper .breakfast-fresh-content h2',
+                    { y: 40, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out',
+                      scrollTrigger: { trigger: '.page-wrapper .breakfast-fresh-content h2', start: sc.start, toggleActions: 'play none none reverse' } }
+                );
+
+                gsap.from('.page-wrapper .breakfast-fresh-divider i, .page-wrapper .breakfast-fresh-divider span', {
+                    opacity: 0, scaleX: 0, transformOrigin: 'left center', duration: 0.5, ease: 'power3.out', stagger: 0.1, delay: 0.2,
+                    scrollTrigger: { trigger: '.page-wrapper .breakfast-fresh-divider', start: sc.start, toggleActions: 'play none none reverse' }
+                });
+
+                gsap.from('.page-wrapper .breakfast-fresh-content > p', {
+                    y: 18, opacity: 0, duration: 0.55, ease: 'power2.out', delay: 0.3,
+                    scrollTrigger: { trigger: '.page-wrapper .breakfast-fresh-content > p', start: 'top 92%', toggleActions: 'play none none reverse' }
+                });
+
+                gsap.fromTo('.page-wrapper .breakfast-fresh-content .order-btn',
+                    { scale: 0.6, opacity: 0 },
+                    { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(3)', delay: 0.4,
+                      scrollTrigger: { trigger: '.page-wrapper .breakfast-fresh-content .order-btn', start: 'top 94%', toggleActions: 'play none none reverse' },
+                      onComplete: function () { gsap.set('.page-wrapper .breakfast-fresh-content .order-btn', { clearProps: 'all' }); } }
+                );
+
+                /* clip-path wipe, one card at a time, each with its own trigger
+                   so it still looks right whether the grid is 2x2 (desktop)
+                   or stacked 1-column (mobile, ≤575px) */
+                gsap.utils.toArray('.page-wrapper .breakfast-gallery-card').forEach(function (card, i) {
+                    gsap.fromTo(card,
+                        { clipPath: 'inset(0 0 100% 0)' },
+                        { clipPath: 'inset(0 0 0% 0)', duration: 0.9, ease: 'power4.inOut', delay: i * 0.08,
+                          scrollTrigger: { trigger: card, start: sc.start, toggleActions: 'play none none reverse' } }
+                    );
+                    var img = card.querySelector('img');
+                    if (img) {
+                        gsap.fromTo(img, { scale: 1.25 }, { scale: 1, duration: 1.1, ease: 'power3.out', delay: i * 0.08 + 0.05,
+                            scrollTrigger: { trigger: card, start: sc.start, toggleActions: 'play none none reverse' } });
+                    }
+                });
+            })();
+
+            /* ============================================================
+               ORDER BUTTONS — magnetic hover
+            ============================================================ */
+            document.querySelectorAll('.page-wrapper .order-btn').forEach(function (btn) {
+                btn.addEventListener('mouseenter', function () { gsap.to(btn, { scale: 1.08, duration: 0.25, ease: 'power2.out' }); });
+                btn.addEventListener('mouseleave', function () { gsap.to(btn, { scale: 1, duration: 0.35, ease: 'elastic.out(1, 0.5)' }); });
+            });
+
+            /* ============================================================
+               SWIPER INIT — same options as your original block, now
+               guaranteed to load after the reveal above has been set up.
+            ============================================================ */
+            $.getScript("https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js", function () {
+                new Swiper(".zentro-gallery-slider", {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                    loop: true,
+                    speed: 800,
+                    grabCursor: true,
+                    centeredSlides: false,
+                    autoplay: { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
+                    navigation: { nextEl: ".swiper-next", prevEl: ".swiper-prev" },
+                    pagination: { el: ".swiper-pagination", clickable: true },
+                    keyboard: { enabled: true },
+                    breakpoints: {
+                        0:    { slidesPerView: 1, spaceBetween: 20 },
+                        576:  { slidesPerView: 2, spaceBetween: 20 },
+                        992:  { slidesPerView: 3, spaceBetween: 25 },
+                        1200: { slidesPerView: 4, spaceBetween: 30 }
+                    }
+                });
+
+                /* final refresh once everything (fonts/images/swiper) has settled */
+                setTimeout(function () { ScrollTrigger.refresh(); }, 350);
+            });
+
+            /* keep triggers correct if the CRM iframe/container gets resized */
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () { ScrollTrigger.refresh(); }, 250);
+            });
+
+        }); /* split-type */
+        }); /* ScrollTrigger */
+        }); /* gsap */
+
+    })();
     </scriptold>
