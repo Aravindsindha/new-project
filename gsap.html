@@ -1,0 +1,1095 @@
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Vidaloka&display=swap" rel="stylesheet">
+
+<!-- swiper js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+body .page-wrapper, .resp-body #root .page-wrapper {margin:0; padding:0; box-sizing:border-box; background-color:var(--html-primary-dark); color:#000; font-size:18px; font-weight:600; line-height:1.3; position:relative; overflow:hidden; --html-primary-dark:#051218; --html-primary-light:#264d5a; --html-secondary:#f1bb04; --color-light:#ffffff; --color-dark:#000000; background:radial-gradient(circle at center,#103848 0%,#072430 100%); --color-filter:brightness(0) saturate(100%) invert(27%) sepia(33%) saturate(594%) hue-rotate(147deg) brightness(200%) contrast(95%);}
+#index_page {margin-top:0 !important;}
+.page-wrapper a {text-decoration:none;}
+.page-wrapper a:hover {text-decoration:none;}
+.page-wrapper section {padding:100px 0; position:relative; z-index:0;}
+.page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {margin:0; padding:0; font-family: "Vidaloka", serif; line-height:1.2;}
+.page-wrapper p {margin:0; padding:0; font-size:26px; font-family: "Inter", sans-serif; font-weight:500; line-height:1.5;}
+.page-wrapper h1 {color:var(--color-light); font-size:75px; line-height:1.1; font-weight:400;}
+.page-wrapper h2 {color:var(--html-secondary); font-size:45px; font-weight:500; text-transform:uppercase; letter-spacing:5px; font-family: "Inter", sans-serif;}
+
+@media(min-width:1200px) {.page-wrapper .container {max-width: 1140px;}}
+@media(min-width:1500px) {.page-wrapper .container {max-width: 1440px;}}
+
+/* ======================================== BUTTON STYLES ====================================== */
+
+.page-wrapper .order-btn {position:relative; display:inline-flex; align-items:center; gap:15px; padding:12px 22px; border:1px solid rgba(255,255,255,.7); border-radius:8px; color:var(--color-light); text-decoration:none; overflow:hidden; transition:.4s;}
+.page-wrapper .order-btn span {position:relative; z-index:2; font-size:18px; font-weight:600;}
+.page-wrapper .btn-icon {position:relative; z-index:2; color:var(--html-secondary); font-size:24px;}
+.page-wrapper .btn-icon small {position:absolute; right:-8px; bottom:-7px; font-size:14px; font-weight:700;}
+.page-wrapper .order-btn::before {content:""; position:absolute; left:-100%; top:0; width:100%; height:100%; background:var(--html-secondary); transition:.5s;}
+.page-wrapper .order-btn:hover::before {left:0;}
+.page-wrapper .order-btn:hover {color:var(--html-primary-dark); text-decoration:none;}
+.page-wrapper .order-btn:hover .btn-icon {color:var(--html-primary-dark);}
+
+/* ======================================== Custom CSS ====================================== */
+
+/* 1st Section Start */
+.page-wrapper .thaivista-hero-section {padding-top:50px; position:relative;}
+.page-wrapper .shadows {position:absolute; top:0; filter:var(--color-filter);}
+.page-wrapper .left-shadow {width:850px; height:1500px; left:0; opacity:0.5;}
+.page-wrapper .right-shadow {right:0; width:900px; height:900px; opacity:0.7;}
+.page-wrapper .thaivista-hero-content {text-align:center; width:75%; margin:auto;}
+.page-wrapper .thaivista-hero-content p {width:75%; margin:10px auto 30px; color:var(--color-light); font-size:20px; line-height:2; font-weight:400;}
+.page-wrapper .thaivista-hero-visual {position:relative;}
+.page-wrapper .thaivista-main-bowl {position:relative; max-width:680px; left:0; right:0; display:flex; margin:auto; transform:rotate(8deg); filter:drop-shadow(2px 4px 6px var(--color-dark));}
+.page-wrapper .thaivista-onion-bowl {position:absolute; right:230px; top:270px; width:250px; filter:drop-shadow(2px 4px 6px var(--color-dark));}
+.page-wrapper .thaivista-sesame-particles {position:absolute; left:145px; top:20px; width:230px; filter:drop-shadow(2px 4px 6px var(--color-dark));}
+.page-wrapper .thaivista-main-bowl {transition:.6s ease;}
+/* 1st Section End */
+
+/* 2nd Section Start */
+.page-wrapper .thaiessence-about-box {text-align:center; padding:30px 60px 50px; border:2px solid rgba(255,255,255,0.8); border-radius:30px; position:relative;}
+.page-wrapper p {color:var(--color-light); font-size:21px; line-height:42px; margin:12px 0 30px; font-weight:400;}
+/* 2nd Section End */
+
+/* 3rd Section Start */
+.page-wrapper .thaimaster-menu-section {position:relative; padding:45px 0 120px !important;}
+.page-wrapper .thaimaster-menu-section::before {content:""; position:absolute; top:7px; right:0; width:75%; height:85%; background-color:var(--html-primary-dark);}
+.page-wrapper .thaimaster-featured-image {width:100%; border-radius:220px 220px 0 0; display:block; transition:.8s; height:520px; object-fit:cover; border:2px solid var(--color-light);}
+.page-wrapper .thaimaster-featured-dish:hover .thaimaster-featured-image {transform:scale(1.05);}
+.page-wrapper .thaimaster-featured-label {position:absolute; left:0; right:0; margin:auto; bottom:30px; background:var(--html-secondary); color:var(--color-dark); display:flex; align-items:center; justify-content:space-between; gap:15px; padding:12px 17px; font-size:22px; font-weight:600; width:fit-content; border:2px solid var(--color-light);}
+.page-wrapper .thaimaster-featured-label .cart-img {filter:invert(1);}
+.page-wrapper .thaimaster-menu-content h2 {text-align:center; color:var(--html-secondary); font-size:45px; font-weight:500; margin:30px 0; text-transform:capitalize;}
+.page-wrapper .thaimaster-menu-content h3 {text-align:center; color:var(--color-light); font-size:40px; font-weight:500; margin:30px 0 40px; line-height:1.2;}
+.page-wrapper .thaimaster-menu-card {transition:.5s;}
+.page-wrapper .thaimaster-image-box {overflow:hidden; border:2px solid rgb(255 255 255);}
+.page-wrapper .thaimaster-image-box img {width:100%; height:250px; object-fit:cover; transition:.8s;}
+.page-wrapper .thaimaster-menu-card:hover .thaimaster-image-box img {transform:scale(1.12);}
+.page-wrapper .thaimaster-card-footer {display:flex; align-items:center; justify-content:space-between; margin-top:12px; padding:10px;}
+.page-wrapper .thaimaster-card-footer span {color:var(--color-light); font-size:28px; font-weight:500;}
+.page-wrapper .thaimaster-menu-card {position:relative;}
+.page-wrapper .thaimaster-menu-card::before {content:""; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #e5b40f; opacity:0; transform:scale(.9); transition:.5s; pointer-events:none;}
+.page-wrapper .thaimaster-menu-card:hover::before {opacity:1; transform:scale(1);}
+.page-wrapper .thaimaster-menu-card:hover {transform:translateY(-12px);}
+.page-wrapper .cart-img {filter:brightness(0) saturate(100%) invert(73%) sepia(54%) saturate(3586%) hue-rotate(10deg) brightness(110%) contrast(97%); max-width:25px;}
+/* 3rd Section End */
+
+/* 4th Section Start */
+.page-wrapper .thailume-features-section {position:relative;}
+.page-wrapper .thailume-features-img {position: absolute; z-index: -1; left: 0; right: 0; margin: auto; top: -150px; filter: invert(1); opacity: 0.3; width: 100%; height: 440px;}
+.page-wrapper .thailume-features-box {border:2px solid rgba(255,255,255,.85); border-radius:30px; padding:40px 45px; backdrop-filter:blur(4px); position:relative; overflow:hidden;}
+.page-wrapper .thailume-feature-item {display:flex; align-items:center; gap:22px; transition:.4s ease; position:relative; padding:12px; transition:.45s ease;}
+.page-wrapper .thailume-feature-icon {flex-shrink:0;}
+.page-wrapper .thailume-feature-icon img {width:95px; transition:.4s ease;}
+.page-wrapper .thailume-feature-content h3 {color:var(--color-light); font-size:28px; font-weight:700; margin-bottom:8px; line-height:1.2;}
+.page-wrapper .thailume-feature-content p {color:var(--color-light); font-size:18px; line-height:28px; margin-bottom:0;}
+.page-wrapper .icon-one {filter:invert(1);}
+.page-wrapper .icon-two {filter:brightness(0) saturate(100%) invert(72%) sepia(19%) saturate(5587%) hue-rotate(9deg) brightness(108%) contrast(97%);}
+.page-wrapper .icon-three {filter:invert(1);}
+.page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:var(--html-secondary);}
+.page-wrapper .thailume-feature-highlight.two .thailume-feature-content h3 {color:var(--color-light);}
+.page-wrapper .thailume-feature-item:hover {transform:translateY(-8px);}
+.page-wrapper .thailume-feature-item::before {content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--html-secondary); transition:.45s ease;}
+.page-wrapper .thailume-feature-item:hover::before {width:100%;}
+.page-wrapper .thailume-feature-item:hover .thailume-feature-icon img {transform:rotate(-8deg) scale(1.1);}
+.page-wrapper .aurathai-recipe-section {position:relative;}
+/* 4th Section End */
+
+/* 5th Section Start */
+.page-wrapper .aurathai-recipe-box {border:2px solid rgba(255,255,255,.75); border-radius:30px; overflow:hidden;}
+.page-wrapper .aurathai-content-area {padding:0 0 0 50px;}
+.page-wrapper .aurathai-content-area h2 {color:var(--html-secondary); font-size:40px; line-height:1.3; font-weight:500; letter-spacing:2px; font-family:"Vidaloka", serif; text-transform:none;}
+.page-wrapper .aurathai-content-area p {color:var(--color-light); font-size:21px; line-height:1.8; font-weight:200; margin:20px auto 30px;}
+.page-wrapper .aurathai-image-wrapper {position:relative; height:100%; overflow:hidden; border-radius:28px; border:2px solid rgba(255,255,255,.75);}
+.page-wrapper .aurathai-main-image {width:100%; height:570px; object-fit:cover; transition:1s ease;}
+/* 5th Section End */
+
+/* 6th Section Start */
+.page-wrapper .thaiflow-info-section {padding-bottom:70px;}
+.page-wrapper .thaiflow-content-area {position:relative; min-height:280px;}
+.page-wrapper .thaiflow-content-box {position:absolute; top:0; left:0; width:100%; opacity:0; visibility:hidden; transform:translateY(30px); transition:.5s;}
+.page-wrapper .thaiflow-content-box.active {opacity:1; visibility:visible; transform:translateY(0);}
+.page-wrapper .thaiflow-content-box h2 {color:var(--html-secondary); font-size:42px; font-family:"Vidaloka", serif; text-transform:none; letter-spacing:1px;}
+.page-wrapper .thaiflow-content-box p {color:var(--color-light); font-size:20px; line-height:42px; margin:15px 0;}
+.page-wrapper .thaiflow-icon-group {display:flex; align-items:center; justify-content:center; gap:45px; height:100%;}
+.page-wrapper .thaiflow-icon-card {width:150px; height:150px; background:var(--color-light); border-radius:6px; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:.4s; position:relative; overflow:hidden;}
+.page-wrapper .thaiflow-icon-card img {width:110px; transition:.4s;}
+.page-wrapper .thaiflow-icon-card.active {background:var(--html-secondary); transform:translateY(-12px) scale(1.2);}
+.page-wrapper .thaiflow-icon-card:hover {transform:translateY(-10px) scale(1.2);}
+.page-wrapper .thaiflow-icon-card::before {content:""; position:absolute; width:0; height:100%; left:0; top:0; background:rgba(255,255,255,.15); transition:.4s;}
+.page-wrapper .thaiflow-icon-card:hover::before {width:100%;}
+.mobileBlock {
+        display: none;
+    }
+/* 6th Section End */
+
+/* 7th Section Start */
+.page-wrapper .thaigallery-section {position:relative;}
+.page-wrapper .thaigallery-section::before {content:''; position:absolute; bottom:0; left:0; width:100%; height:100%; background:linear-gradient(0deg, rgb(106 146 158) 0%, rgba(255, 255, 255, 0) 42%);}
+.page-wrapper .thaigallery-left-card {margin-top:80px;}
+.page-wrapper .thaigallery-bottom-card.one {margin-top:60px;}
+.page-wrapper .thaigallery-left-card img {width:100%; height:260px; object-fit:cover;}
+.page-wrapper .thaigallery-center-card {position:relative; z-index:2;}
+.page-wrapper .thaigallery-center-card img {width:100%; height:560px; object-fit:cover;}
+.page-wrapper .thaigallery-content-wrap h2 {color:var(--html-secondary); font-size:38px; letter-spacing:1px; line-height:1.15; margin:20px 0 50px; font-family:"Vidaloka", serif; text-transform:none; margin-left:60px;}
+.page-wrapper .thaigallery-bottom-card img {width:100%; height:260px; object-fit:cover;}
+.page-wrapper .thaigallery-left-card h4, .page-wrapper .thaigallery-center-card h4, .page-wrapper .thaigallery-bottom-card h4 {color:var(--color-light); text-align:center; font-size:20px; margin-top:15px; font-family:"Inter", sans-serif;}
+.page-wrapper .thaigallery-left-card img, .page-wrapper .thaigallery-center-card img, .page-wrapper .thaigallery-bottom-card img {transition:.5s;}
+.page-wrapper .thaigallery-left-card:hover img, .page-wrapper .thaigallery-center-card:hover img, .page-wrapper .thaigallery-bottom-card:hover img {transform:translateY(-10px);}
+/* 7th Section End */
+
+/* ======================================== Responsive CSS ====================================== */
+
+@media (max-width:1499px)
+{
+    .page-wrapper section {padding:90px 0;}
+    .page-wrapper h1 {font-size:62px;}
+    .page-wrapper h2 {font-size:42px;}
+    .page-wrapper .thaimaster-menu-content h2 {font-size:40px; letter-spacing:3px;}
+    .page-wrapper .thaimaster-menu-content h3 {font-size:35px;}
+    .page-wrapper .thaimaster-featured-label {padding:10px 13px; font-size:19px;}
+    .page-wrapper .cart-img {max-width:22px;}
+    .page-wrapper .thailume-feature-content h3 {font-size:22px;}
+    .page-wrapper .thailume-feature-content p {font-size:16px;}
+    .page-wrapper .aurathai-content-area h2 {font-size:35px;}
+    .page-wrapper .aurathai-content-area p {font-size:18px;}
+    .page-wrapper .order-btn {padding:9px 19px;}
+    .page-wrapper .thaigallery-content-wrap h2 {font-size:30px;}
+    .page-wrapper p {font-size:20px; line-height:38px;}
+    .page-wrapper .thaivista-hero-content {width:85%;}
+    .page-wrapper .thaivista-main-bowl {max-width:530px;}
+    .page-wrapper .thaivista-onion-bowl {width:160px; right:210px; top:210px;}
+    .page-wrapper .thaivista-sesame-particles {width:160px; left:130px;}
+    .page-wrapper .left-shadow {width:720px;}
+    .page-wrapper .right-shadow {width:760px;}
+    .page-wrapper .thaimaster-featured-image {height:480px;}
+    .page-wrapper .thaimaster-card-footer span {font-size:21px;}
+    .page-wrapper .aurathai-main-image {height:520px;}
+    .page-wrapper .thaiflow-icon-card {width:135px; height:135px;}
+    .page-wrapper .thaiflow-icon-card img {width:95px;}
+    .page-wrapper .thaigallery-center-card img {height:520px;}
+    .page-wrapper .thaimaster-menu-section::before {width:82%;}
+    .page-wrapper .thaimaster-card-footer {padding: 7px;}
+    .page-wrapper .thailume-features-img {top: -140px;}
+}
+
+@media (max-width:1199px)
+{
+    .page-wrapper h1 {font-size:50px;}
+    .page-wrapper h2 {font-size:36px; letter-spacing:3px;}
+    .page-wrapper p {font-size:18px; line-height:34px;}
+    .page-wrapper .thaivista-hero-content {width:95%;}
+    .page-wrapper .thaivista-hero-content p {width:80%; font-size:18px;}
+    .page-wrapper .thaivista-main-bowl {max-width:460px;}
+    .page-wrapper .thaivista-onion-bowl {width:150px; right:170px; top:210px;}
+    .page-wrapper .thaivista-sesame-particles {width:130px; left:120px;}
+    .page-wrapper .thaiessence-about-box {padding:30px 40px 45px;}
+    .page-wrapper .thaimaster-featured-image {height:420px;}
+    .page-wrapper .thaimaster-menu-content h2 {font-size:38px;}
+    .page-wrapper .thaimaster-menu-content h3 {font-size:30px;}
+    .page-wrapper .thaimaster-image-box img {height:220px;}
+    .page-wrapper .thaimaster-card-footer span {font-size:15px;}
+    .page-wrapper .thailume-feature-item {gap:9px;}
+    .page-wrapper .thailume-features-box {padding:15px;}
+    .page-wrapper .thailume-feature-icon img {width:70px;}
+    .page-wrapper .thailume-feature-content h3 {font-size:22px;}
+    .page-wrapper .aurathai-content-area {padding-left:30px;}
+    .page-wrapper .aurathai-content-area h2 {font-size:30px;}
+    .page-wrapper .aurathai-content-area p {font-size:15px;}
+    .page-wrapper .thaiflow-content-box h2 {font-size:38px;}
+    .page-wrapper .aurathai-main-image {height:480px;}
+    .page-wrapper .thaiflow-icon-group {gap:25px;}
+    .page-wrapper .thailume-feature-content p {font-size:14px;}
+    .page-wrapper .thaiflow-content-box p {font-size:18px; line-height:34px;}
+    .page-wrapper .thaiflow-icon-card {width:120px; height:120px;}
+    .page-wrapper .thaiflow-icon-card img {width:80px;}
+    .page-wrapper .thaigallery-content-wrap h2 {font-size:27px; margin:20px 0 30px 30px;}
+    .page-wrapper .thaimaster-menu-section::before {width:82%;}
+    .page-wrapper .thaigallery-center-card img {height:460px;}
+    .page-wrapper .thaigallery-bottom-card.one {margin-top:40px;}
+    .page-wrapper .thailume-features-img {height:390px;}
+    .page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:#ffffff;}
+    .page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:var(--html-secondary);}
+}
+
+@media (max-width:991px)
+{
+    .page-wrapper section {padding:70px 0;}
+    .page-wrapper h1 {font-size:45px;}
+    .page-wrapper h2 {font-size:32px;}
+    .page-wrapper .thaivista-main-bowl {max-width:400px;}
+    .page-wrapper .thaivista-onion-bowl {width:110px; right:100px; top:170px;}
+    .page-wrapper .thaivista-sesame-particles {width:110px; left:60px;}
+    .page-wrapper .thaimaster-featured-image {height:360px;}
+    .page-wrapper .thaimaster-image-box img {height:180px;}
+    .page-wrapper .thaimaster-card-footer span {font-size:11px;}
+    .page-wrapper .cart-img {max-width:18px;}
+    .page-wrapper .thaimaster-card-footer {padding:0 3px 6px;}
+    .page-wrapper .thailume-feature-item {gap:14px;}
+    .page-wrapper .thailume-feature-icon img {width:60px;}
+    .page-wrapper .thailume-feature-content h3 {font-size:20px;}
+    .page-wrapper .thailume-feature-content p {font-size:15px; line-height:24px;}
+    .page-wrapper .aurathai-content-area h2 {font-size:21px;}
+    .page-wrapper .aurathai-content-area p {font-size:13px; margin:10px auto 20px;}
+    .page-wrapper .order-btn span {font-size:17px;}
+    .page-wrapper .order-btn {padding:7px 16px;}
+    .page-wrapper .aurathai-main-image {height:420px;}
+    .page-wrapper .thaiflow-content-box h2 {font-size:34px;}
+    .page-wrapper .thaiflow-content-box p {font-size:14px; line-height:34px;}
+    .page-wrapper .thaiflow-icon-card {width:100px; height:100px;}
+    .page-wrapper .thaimaster-menu-content h3 {font-size:24px;}
+    .page-wrapper .thaiflow-icon-card img {width:65px;}
+    .page-wrapper .thaiflow-info-section {padding-bottom:20px;}
+    .page-wrapper .thaigallery-content-wrap h2 {font-size:20px;}
+    .page-wrapper .thaigallery-center-card img {height:370px;}
+    .page-wrapper .thaimaster-menu-section::before {height:86%; top:9px;}
+    .page-wrapper .thaigallery-bottom-card.one {margin-top:30px;}
+    .page-wrapper .thaimaster-menu-section {padding:0 0 60px !important;}
+    .page-wrapper .thaigallery-left-card h4, .page-wrapper .thaigallery-center-card h4, .page-wrapper .thaigallery-bottom-card h4 {font-size:17px;}
+    .page-wrapper .thaigallery-left-card img, .page-wrapper .thaigallery-bottom-card img {height:200px;}
+    .page-wrapper .thaimaster-featured-label {padding:9px 10px; font-size:15px;}
+    .page-wrapper .thailume-features-img {height:490px; top: -170px;}
+    .page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:#ffffff;}
+    .page-wrapper .icon-two {filter:invert(1);}
+    .page-wrapper .thailume-feature-highlight.two .thailume-feature-content h3 {color:var(--html-secondary);}
+    .page-wrapper .icon-three {filter:brightness(0) saturate(100%) invert(72%) sepia(19%) saturate(5587%) hue-rotate(9deg) brightness(108%) contrast(97%);}
+}
+
+@media (max-width:767px)
+{
+    .page-wrapper h1 {font-size:37px;}
+    .page-wrapper h2 {font-size:28px;}
+    .page-wrapper p {font-size:14px; line-height:30px; margin:12px 0 20px;}
+    .page-wrapper .thaivista-hero-content {width:100%;}
+    .page-wrapper .thaivista-main-bowl {max-width:420px;}
+    .page-wrapper .thaivista-onion-bowl {width:110px; right:20px; top:230px;}
+    .page-wrapper .thaivista-sesame-particles {width:100px; left:-10px; top:-20px;}
+    .page-wrapper .thaiessence-about-box {padding:25px;}
+    .page-wrapper .thailume-features-box {padding:25px;}
+    .page-wrapper .aurathai-content-area {padding:50px 20px; text-align:center;}
+    .page-wrapper .thaiflow-info-section {padding-bottom:0;}
+    .page-wrapper .thaiflow-content-area {min-height:230px;}
+    .page-wrapper .thaiflow-content-box {text-align:center;}
+    .page-wrapper .aurathai-content-area h2 {font-size:26px;}
+    .page-wrapper .thaiflow-icon-group {gap:15px;}
+    .page-wrapper .thaiflow-icon-card {width:85px; height:85px;}
+    .page-wrapper .thaiflow-icon-card img {width:55px;}
+    .page-wrapper .thaigallery-content-wrap h2 {font-size:28px; bottom:330px; position:relative; text-align:center;}
+    .page-wrapper .thaivista-hero-content p {width:100%; font-size:16px; line-height:1.8;}
+    .page-wrapper .thailume-features-img {height:540px; top: -140px;}
+    .page-wrapper .thailume-feature-highlight .thailume-feature-content h3 {color:var(--html-secondary);}
+    .page-wrapper .thailume-feature-highlight.two .thailume-feature-content h3 {color:var(--color-light);}
+    .page-wrapper .icon-two {filter:brightness(0) saturate(100%) invert(72%) sepia(19%) saturate(5587%) hue-rotate(9deg) brightness(108%) contrast(97%);}
+    .page-wrapper .icon-three {filter:invert(1);}
+    .page-wrapper .thaigallery-bottom-card.one {margin-top:0;}
+    .page-wrapper .thaigallery-left-card img, .page-wrapper .thaigallery-bottom-card img {height:100%;}
+    .page-wrapper .thaigallery-center-card img {height:100%;}
+    .page-wrapper .thaigallery-card {margin-top:160px;}
+    .page-wrapper .thaigallery-content-wrap {position:relative; margin-top:-80px;}
+    .page-wrapper .thaigallery-left-card h4, .page-wrapper .thaigallery-center-card h4, .page-wrapper .thaigallery-bottom-card h4 {font-size:22px;}
+    .page-wrapper .thaimaster-card-footer span {font-size:18px;}
+    .page-wrapper .thaimaster-featured-image {max-width:350px; margin:auto;}
+    .page-wrapper .thaimaster-menu-section::before {display:none;}
+    .page-wrapper .thaimaster-menu-section {padding:0 0 20px !important;}
+    .page-wrapper .thaimaster-image-box img {height:220px;}
+  
+}
+
+@media (max-width:575px)
+{
+    .page-wrapper .mobileBlock { display: block; margin: 0 auto 10px; max-width: 100px; background-color: var(--color-light); padding: 10px; border-radius: 20px;}
+    .page-wrapper section {padding:60px 0;}
+    .page-wrapper h1 {font-size:27px; line-height:1.2;}
+    .page-wrapper h2 {font-size:24px; letter-spacing:2px;}
+    .page-wrapper p {font-size:16px; line-height:28px;}
+    .page-wrapper .thaimaster-featured-label {bottom:30px;}
+    .page-wrapper .thaimaster-card-footer {justify-content:center; gap:30px;}
+    .page-wrapper .thaimaster-card-footer span {font-size:22px;}
+    .page-wrapper .cart-img {max-width:22px;}
+    .page-wrapper .thaimaster-image-box img {height:280px;}
+    .page-wrapper .thaimaster-menu-content h2 {font-size:35px;}
+    .page-wrapper .thaivista-main-bowl {max-width:370px; width: 100%;}
+    .page-wrapper .thaivista-onion-bowl {width:70px; right:-5px; top:160px;}
+    .page-wrapper .thaivista-sesame-particles {width:70px; left:-10px; top:-30px;}
+    .page-wrapper .shadows {display:none;}
+    .page-wrapper .thaiessence-about-box {padding:20px; max-width: 370px; margin: auto;}
+    .page-wrapper .thaimaster-menu-section::before {display:none;}
+    .page-wrapper .thaimaster-featured-dish {margin-bottom:0;}
+    .page-wrapper .thaimaster-menu-card {margin-bottom:25px; max-width: 370px; margin: 0 auto 25px;}
+    .page-wrapper .thailume-feature-item {margin-bottom:20px; flex-direction: column; text-align: center;}
+    .page-wrapper .aurathai-content-area {padding:25px 10px;}
+    .page-wrapper .aurathai-main-image {height:320px;}
+    .page-wrapper .thaiflow-content-area {min-height:auto; margin-bottom:30px;}
+    .page-wrapper .thaiflow-content-box {position:relative; opacity:1; visibility:visible; transform:none; text-align:center; margin-top:0;}
+    .page-wrapper .thaiflow-icon-group {flex-wrap:wrap; justify-content:center;}
+    .page-wrapper .thaiflow-icon-card {width:90px; height:90px; display: none;}
+    .page-wrapper .thaigallery-left-card, .page-wrapper .thaigallery-bottom-card.one {max-width: 370px; margin: 0 auto 30px;}
+    .page-wrapper .thaigallery-center-card, .page-wrapper .thaigallery-left-card, .page-wrapper .thaigallery-bottom-card {max-width: 370px; margin: 0 auto 30px;}
+    .page-wrapper .thaimaster-menu-section {padding:10px 0 0px !important;}
+    .page-wrapper .thaigallery-section {padding-top:90px !important;}
+    .page-wrapper .thailume-features-img {height:850px; top:-160px; display:none;}
+    .page-wrapper .thailume-feature-icon img {width:50px;}
+    .page-wrapper .thailume-features-box {padding:10px; max-width: 370px; margin: auto;}
+    .page-wrapper .thaiflow-content-box h2 {font-size:30px;}
+    .page-wrapper .thaiflow-content-box p {font-size:16px; line-height:30px; margin: 15px auto; max-width: 290px;}
+    .page-wrapper .thaigallery-content-wrap h2 {margin:0 0 30px; font-size:19px; top:-700px; position:relative; text-align:center;}
+    .page-wrapper .thaigallery-left-card img, .page-wrapper .thaigallery-bottom-card img {height:280px;}
+    .page-wrapper .thaigallery-center-card img {height:280px;}
+    .page-wrapper .thaimaster-menu-content h3 {margin:0px 0 50px;}
+    .page-wrapper .thaiflow-icon-card.three {position:absolute; top:-370px;}
+    .page-wrapper .thaiflow-icon-card.two {position:absolute; top:-760px;}
+    .page-wrapper .thaiflow-icon-card.active {background:#ffffff; transform:unset; position:absolute; top:-1150px;}
+    .page-wrapper .thaigallery-card {max-width: 370px; margin: 0 auto 30px;}
+    .page-wrapper .thaigallery-content-wrap {margin-top:-75px;}
+    .page-wrapper .thaivista-hero-content p {max-width: 370px;}
+    .page-wrapper .aurathai-recipe-box{max-width: 370px; margin: auto;}
+}
+
+</style>
+
+    <div class="page-wrapper">
+
+        <!-- 1st Section -->
+        <section class="thaivista-hero-section pb-0">
+            <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786535436phpo3qgk9.png" class="img-fluid shadows left-shadow" alt="{TAKEAWAY NAME} Shadow">
+            <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786535436phpfiGd5x.png" class="img-fluid shadows right-shadow" alt="{TAKEAWAY NAME} Shadow">
+            <div class="container">
+                <div class="thaivista-hero-content">
+                    <h1>
+                        Savour the Rich Taste of <br>
+                        Thailand Anytime 
+                    </h1>
+                    <p>
+                        Welcome to {TAKEAWAY NAME}, where the vibrant essence of Thai cuisine comes alive in the heart of {TAKEAWAY TOWN}. Our talented chefs prepare every dish using authentic ingredients, fragrant herbs, and traditional recipes that celebrate the rich culinary heritage of Thailand.
+                    </p>
+                </div>
+                <div class="thaivista-hero-visual">
+                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786510112php97smqD.png" alt="{TAKEAWAY NAME} Thai Noodles" class="thaivista-main-bowl">
+                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786509225phpDU1wlH.png" alt="{TAKEAWAY NAME} Green Onion Bowl" class="thaivista-onion-bowl">
+                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786509225php2hMJYO.png" alt="{TAKEAWAY NAME} Sesame" class="thaivista-sesame-particles">
+                </div>
+                <div id="offer-section" class="py-4 py-lg-5"></div>
+            </div>
+        </section>
+
+        <!-- 2nd Section -->
+        <section class="pt-0">
+            <div class="container">
+                <div class="thaiessence-about-box">
+                    <h2>ABOUT US</h2>
+                    <p>
+                        At {TAKEAWAY NAME}, dining is about more than just great food — it's about experiencing the warmth and spirit of Thai hospitality. Relax in our inviting atmosphere while enjoying expertly prepared dishes that perfectly balance sweet, spicy, savoury, and tangy flavours. Whether you're joining us for a casual lunch, a family gathering, or a special evening out, every visit promises exceptional taste and genuine Thai-inspired comfort.
+                    </p>
+                    <a href="/order-now" class="order-btn">
+                        <span>Order Now</span>
+                        <div class="btn-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <small>+</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3rd Section -->
+        <section class="thaimaster-menu-section pt-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="thaimaster-featured-dish">
+                            <a href="/order-now">
+                            <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786594968php1AFsNY.jpg" alt="{TAKEAWAY NAME} Green Curry" class="thaimaster-featured-image img-fluid">
+                                <div class="thaimaster-featured-label">
+                                    <span>Green Curry</span>
+                                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786597444phpgLIzx9.png" class="img-fluid cart-img" alt="{TAKEAWAY NAME} Cart">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <div class="thaimaster-menu-content">
+                            <h2>
+                                Our Menu
+                            </h2>
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="thaimaster-menu-card">
+                                        <a href="/order-now">
+                                            <div class="thaimaster-image-box">
+                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786594968php3unWf6.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Red Curry">
+                                            </div>
+                                            <div class="thaimaster-card-footer">
+                                                <span>Red Curry</span>
+                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786597444phpgLIzx9.png" class="img-fluid cart-img" alt="{TAKEAWAY NAME} Cart">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                    <div class="thaimaster-menu-card">
+                                        <a href="/order-now">
+                                            <div class="thaimaster-image-box">
+                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786594968phphPB4qo.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Stir-fried Noodles">
+                                            </div>
+                                            <div class="thaimaster-card-footer">
+                                                <span>Stir-fried Noodles</span>
+                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786597444phpgLIzx9.png" class="img-fluid cart-img" alt="{TAKEAWAY NAME} Cart">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 pt-sm-4 pt-md-0">
+                                    <div class="thaimaster-menu-card">
+                                        <a href="/order-now">
+                                            <div class="thaimaster-image-box">
+                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786594968phpNrbfCG.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Thai Fried Rice">
+                                            </div>
+                                            <div class="thaimaster-card-footer">
+                                                <span>Thai Fried Rice</span>
+                                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786597444phpgLIzx9.png" class="img-fluid cart-img" alt="{TAKEAWAY NAME} Cart">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>
+                                A True Taste of Thailand in Every Bite
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4th Section -->
+        <section class="thailume-features-section pt-0">
+            <div class="container">
+                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786706285phpbrF5GO.png" class="img-fluid thailume-features-img" alt="{TAKEAWAY NAME} Shadow">
+                <div class="thailume-features-box">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="thailume-feature-item">
+                                <div class="thailume-feature-icon">
+                                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786511008php7Cyv7t.png" class="img-fluid icon-one" alt="{TAKEAWAY NAME} Pick Icon">
+                                </div>
+                                <div class="thailume-feature-content">
+                                    <h3>Order in Seconds</h3>
+                                    <p>Find the perfect dish for any craving.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="thailume-feature-item thailume-feature-highlight">
+                                <div class="thailume-feature-icon">
+                                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786511009phpaPqvYU.png" class="img-fluid icon-two" alt="{TAKEAWAY NAME} Checkout Icon">
+                                </div>
+                                <div class="thailume-feature-content">
+                                    <h3>Secure Checkout</h3>
+                                    <p>A seamless, stress-free way to pay.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="thailume-feature-item thailume-feature-highlight two">
+                                <div class="thailume-feature-icon">
+                                    <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786511009phphFIvPl.png" class="img-fluid icon-three" alt="{TAKEAWAY NAME} Fresh Icon">
+                                </div>
+                                <div class="thailume-feature-content">
+                                    <h3>Served Fresh</h3>
+                                    <p> Freshly made and good to go when you are.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5th Section -->
+        <section class="aurathai-recipe-section pt-0">
+            <div class="container">
+                <div class="aurathai-recipe-box">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="aurathai-content-area">
+                                <h2>
+                                    Traditional Recipes Made with Premium Ingredients
+                                </h2>
+                                <p>
+                                    Experience the perfect balance of sweet, savoury, spicy, and fragrant flavours with the takeaway service from {TAKEAWAY NAME}. Our menu offers a variety of delicious Thai dishes prepared fresh to order, making it easy to enjoy your favourite meals at home, at work, or on the go. Every bite captures the warmth, richness, and authenticity that make Thai cuisine so loved around the world.
+                                </p>
+                                <a href="#" class="order-btn">
+                                    <span>Order Now</span>
+                                    <div class="btn-icon">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <small>+</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 px-0">
+                            <div class="aurathai-image-wrapper">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786513344phptRWhzi.jpg" alt="{TAKEAWAY NAME} Pad Thai" class="aurathai-main-image img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6th Section -->
+        <section class="thaiflow-info-section pt-0">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="thaiflow-content-area">
+                            <div class="thaiflow-content-box one active" id="thaiflow-services">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584php88SlGD.png" class="img-fluid mobileBlock" alt="{TAKEAWAY NAME} Service Icon">
+                                <h2>Our Services:</h2>
+                                <p>
+                                    At {TAKEAWAY NAME}, we take pride in serving delicious food with fast takeaway service in {TAKEAWAY TOWN}. No matter the occasion or dietary need, we've got something for you. Find your new favourite meal today!
+                                </p>
+                            </div>
+                            <div class="thaiflow-content-box two" id="thaiflow-menu">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584phpudvaon.png" class="img-fluid mobileBlock" alt="{TAKEAWAY NAME} Menu Icon">
+                                <h2>Our Menu:</h2>
+                                <p>
+                                    Explore the latest takeaway menu in {TAKEAWAY TOWN} at {TAKEAWAY NAME}! From classic favourites to exciting new dishes, each meal is prepared fresh to order. Order online now and experience flavours you'll love!
+                                </p>
+                            </div>
+                            <div class="thaiflow-content-box three" id="thaiflow-hygiene">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584phpqswZ56.png" class="img-fluid mobileBlock" alt="{TAKEAWAY NAME} Hygiene Icon">
+                                <h2>Our Hygiene:</h2>
+                                <p>
+                                    At {TAKEAWAY NAME}, we maintain strict food safety standards to ensure your meal is freshly prepared in a clean environment. Our commitment to hygienic food takeaway means you can enjoy every bite with confidence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="thaiflow-icon-group">
+                            <div class="thaiflow-icon-card one active" data-target="thaiflow-services">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584php88SlGD.png" class="img-fluid desktopBlock" alt="{TAKEAWAY NAME} Service Icon">
+                            </div>
+    
+                            <div class="thaiflow-icon-card two" data-target="thaiflow-menu">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584phpudvaon.png" class="img-fluid desktopBlock" alt="{TAKEAWAY NAME} Menu Icon">
+                            </div>
+    
+                            <div class="thaiflow-icon-card three" data-target="thaiflow-hygiene">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786517584phpqswZ56.png" class="img-fluid desktopBlock" alt="{TAKEAWAY NAME} Hygiene Icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7th Section -->
+        <section class="thaigallery-section pt-0">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <a href="/order-now">
+                            <div class="thaigallery-left-card thaigallery-card">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786617054phpNiTqCi.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Chicken Soup">
+                                <h4>Chicken Soup</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <a href="/order-now">
+                            <div class="thaigallery-center-card thaigallery-card">
+                                <img src="https://public.touch2success.com/static/604de5296069abfeb331ba3a62647e85/img/1786617054phptrY3dx.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Papaya Salad">
+                                <h4>Papaya Salad</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="thaigallery-content-wrap">
+                            <h2>
+                                Treat Yourself to Thailand's
+                                Most Loved Culinary Traditions
+                            </h2>
+                            <div class="row no-gutters">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="/order-now">
+                                        <div class="thaigallery-bottom-card one">
+                                            <img src="https://public.touch2success.com/static/c5da8c3b32b8cc9fc8d76de87e85ec0a/img/1755969730phpKpDD02.png" class="img-fluid" alt="{TAKEAWAY NAME} Spring Rolls">
+                                            <h4>Spring Rolls</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <a href="/order-now">
+                                        <div class="thaigallery-bottom-card">
+                                            <img src="https://assets.touch2success.com/static/feae73d1a026d6a4e8b40eda02286ebc/img/1698674677phppKdcxh.jpg" class="img-fluid" alt="{TAKEAWAY NAME} Ramen">
+                                            <h4>Ramen</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Tab-switch logic for the "Our Services / Menu / Hygiene" flow cards.
+         Converted from <script> to <scriptold> since the CRM strips raw <script> tags. -->
+    <scriptold>
+        (function(){
+            var cards=document.querySelectorAll(".thaiflow-icon-card");
+            var contents=document.querySelectorAll(".thaiflow-content-box");
+        
+            cards.forEach(function(card){
+                card.onclick=function(){
+                    var target=card.getAttribute("data-target");
+        
+                    cards.forEach(function(item){
+                        item.classList.remove("active");
+                    });
+        
+                    contents.forEach(function(item){
+                        item.classList.remove("active");
+                    });
+        
+                    card.classList.add("active");
+        
+                    var content=document.getElementById(target);
+        
+                    if(content){
+                        content.classList.add("active");
+                    }
+                };
+            });
+        })();
+    </scriptold>
+
+    <!-- ============================================================
+         GSAP + SplitType scroll-reveal animations
+         Tailored to this template's actual class names
+         (thaivista / thaiessence / thaimaster / thailume / aurathai / thaiflow / thaigallery).
+
+         NOTE: if a section doesn't animate on your CRM, the most common
+         fix is nudging the "start" value in cfg() below (e.g. 'top 85%'
+         -> 'top 95%') since header heights / CRM wrappers shift where
+         the trigger element enters the viewport.
+    ============================================================ -->
+    <scriptold>
+    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js", function () {
+      $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js", function () {
+        $.getScript("https://unpkg.com/split-type", function () {
+
+          gsap.registerPlugin(ScrollTrigger);
+
+          var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (prefersReduced) { return; }
+
+          /* ============================================================
+             SMOOTH SCROLLER — finds the real CRM scroll container and
+             animates scrollTop manually via RAF for a buttery feel.
+          ============================================================ */
+          (function() {
+            function getScroller() {
+              var el = document.querySelector('.page-wrapper');
+              if (!el) return document.documentElement;
+              var p = el.parentElement;
+              while (p && p !== document.body && p !== document.documentElement) {
+                var s = window.getComputedStyle(p);
+                if (/auto|scroll/.test(s.overflow + s.overflowY) && p.scrollHeight > p.clientHeight) {
+                  return p;
+                }
+                p = p.parentElement;
+              }
+              return document.documentElement;
+            }
+
+            var scroller  = getScroller();
+            var target    = scroller.scrollTop;
+            var current   = scroller.scrollTop;
+            var ease      = 0.09;
+            var rafId     = null;
+            var isRunning = false;
+
+            function lerp(a, b, t) { return a + (b - a) * t; }
+
+            function tick() {
+              current = lerp(current, target, ease);
+              var diff = Math.abs(target - current);
+              if (diff < 0.5) { current = target; isRunning = false; return; }
+              scroller.scrollTop = current;
+              rafId = requestAnimationFrame(tick);
+            }
+
+            scroller.addEventListener('wheel', function(e) {
+              e.preventDefault();
+              var delta = e.deltaY;
+              if (e.deltaMode === 1) delta *= 30;
+              if (e.deltaMode === 2) delta *= 300;
+              target += delta * 1.2;
+              var maxScroll = scroller.scrollHeight - scroller.clientHeight;
+              target = Math.max(0, Math.min(target, maxScroll));
+              if (!isRunning) { isRunning = true; rafId = requestAnimationFrame(tick); }
+            }, { passive: false });
+
+            scroller.addEventListener('scroll', function() {
+              if (!isRunning) { target = scroller.scrollTop; current = scroller.scrollTop; }
+            });
+
+            if (scroller !== document.documentElement) {
+              ScrollTrigger.defaults({ scroller: scroller });
+            }
+            window.__pageScroller = scroller;
+          })();
+
+          /* Responsive trigger start points — adjust here if a CRM
+             header/margin pushes content and reveals fire too early/late. */
+          function cfg() {
+            var w = window.innerWidth;
+            if (w <= 575) return { start: 'top 88%' };
+            if (w <= 991) return { start: 'top 90%' };
+            return { start: 'top 82%' };
+          }
+
+          /* ============================================================
+             ① HERO — thaivista-hero-section
+          ============================================================ */
+          (function() {
+            var h1 = document.querySelector('.page-wrapper .thaivista-hero-content h1');
+            if (h1) {
+              var split = new SplitType(h1, { types: 'words' });
+              gsap.from(split.words, {
+                y: 60, opacity: 0,
+                rotateZ: function(i) { return (i % 2 === 0) ? -4 : 4; },
+                duration: 0.9, ease: 'expo.out',
+                stagger: { each: 0.07, from: 'start' }, delay: 0.15
+              });
+            }
+
+            gsap.from('.page-wrapper .thaivista-hero-content > p', {
+              y: 30, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.55
+            });
+
+            gsap.fromTo('.page-wrapper .shadows.left-shadow',
+              { opacity: 0, x: -60 }, { opacity: 0.5, x: 0, duration: 1.4, ease: 'power2.out', delay: 0.2 });
+            gsap.fromTo('.page-wrapper .shadows.right-shadow',
+              { opacity: 0, x: 60 }, { opacity: 0.7, x: 0, duration: 1.4, ease: 'power2.out', delay: 0.3 });
+
+            gsap.fromTo('.page-wrapper .thaivista-main-bowl',
+              { opacity: 0, scale: 0.8, rotate: -4, y: 60 },
+              { opacity: 1, scale: 1, rotate: 8, y: 0, duration: 1.1, ease: 'expo.out', delay: 0.35,
+                onComplete: function() {
+                  gsap.to('.page-wrapper .thaivista-main-bowl', { y: -12, duration: 2.6, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+                }
+              }
+            );
+            gsap.fromTo('.page-wrapper .thaivista-onion-bowl',
+              { opacity: 0, y: 40, scale: 0.7 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(2)', delay: 0.6 });
+            gsap.fromTo('.page-wrapper .thaivista-sesame-particles',
+              { opacity: 0, y: -30, scale: 0.7 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'back.out(2)', delay: 0.75 });
+
+            gsap.fromTo('.page-wrapper #offer-section',
+              { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: 0.9 });
+          })();
+
+          /* ============================================================
+             ② ABOUT — thaiessence-about-box
+          ============================================================ */
+          (function() {
+            var sc = cfg();
+            var box = document.querySelector('.page-wrapper .thaiessence-about-box');
+            if (!box) return;
+
+            gsap.fromTo(box,
+              { opacity: 0, y: 50 },
+              { opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+                scrollTrigger: { trigger: box, start: sc.start, toggleActions: 'play none none reverse' }
+              }
+            );
+
+            var h2 = box.querySelector('h2');
+            if (h2) {
+              var s2 = new SplitType(h2, { types: 'chars' });
+              gsap.from(s2.chars, {
+                y: 30, opacity: 0, duration: 0.5, ease: 'back.out(2)', stagger: 0.02,
+                scrollTrigger: { trigger: h2, start: 'top 85%', toggleActions: 'play none none reverse' }
+              });
+            }
+
+            var p = box.querySelector('p');
+            if (p) {
+              var sp = new SplitType(p, { types: 'words' });
+              gsap.from(sp.words, {
+                opacity: 0, y: 14, filter: 'blur(3px)', duration: 0.45, ease: 'power2.out', stagger: 0.015,
+                scrollTrigger: { trigger: p, start: 'top 88%', toggleActions: 'play none none reverse' }
+              });
+            }
+
+            var btn = box.querySelector('.order-btn');
+            if (btn) {
+              gsap.fromTo(btn, { scale: 0.6, opacity: 0 }, {
+                scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(3)',
+                scrollTrigger: { trigger: btn, start: 'top 95%', toggleActions: 'play none none reverse' },
+                onComplete: function() { gsap.set(btn, { clearProps: 'all' }); }
+              });
+            }
+          })();
+
+          /* ============================================================
+             ③ MENU — thaimaster-menu-section
+          ============================================================ */
+          (function() {
+            var sc = cfg();
+            var section = document.querySelector('.page-wrapper .thaimaster-menu-section');
+            if (!section) return;
+
+            var featuredImg = section.querySelector('.thaimaster-featured-image');
+            if (featuredImg) {
+              gsap.fromTo(featuredImg,
+                { clipPath: 'inset(100% 0 0 0)' },
+                { clipPath: 'inset(0% 0 0 0)', duration: 1.1, ease: 'power3.inOut',
+                  scrollTrigger: { trigger: featuredImg, start: sc.start, toggleActions: 'play none none reverse' }
+                }
+              );
+            }
+            var label = section.querySelector('.thaimaster-featured-label');
+            if (label) {
+              gsap.fromTo(label, { opacity: 0, y: 20 }, {
+                opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 0.4,
+                scrollTrigger: { trigger: section.querySelector('.thaimaster-featured-dish'), start: sc.start, toggleActions: 'play none none reverse' }
+              });
+            }
+
+            var h2 = section.querySelector('.thaimaster-menu-content h2');
+            if (h2) {
+              var s2 = new SplitType(h2, { types: 'words' });
+              gsap.from(s2.words, {
+                y: 45, opacity: 0, rotateX: -30, transformOrigin: 'top center',
+                duration: 0.7, ease: 'power3.out', stagger: 0.08,
+                scrollTrigger: { trigger: h2, start: sc.start, toggleActions: 'play none none reverse' }
+              });
+            }
+
+            var cardRow = section.querySelector('.thaimaster-menu-content .row');
+            var cards = section.querySelectorAll('.thaimaster-menu-card');
+            if (cards.length) {
+              gsap.fromTo(cards,
+                { opacity: 0, y: 60, scale: 0.9, rotate: -3 },
+                { opacity: 1, y: 0, scale: 1, rotate: 0, duration: 0.7, ease: 'back.out(1.6)', stagger: 0.15,
+                  scrollTrigger: { trigger: cardRow || cards[0], start: sc.start, toggleActions: 'play none none reverse' }
+                }
+              );
+            }
+
+            var h3 = section.querySelector('.thaimaster-menu-content h3');
+            if (h3) {
+              var s3 = new SplitType(h3, { types: 'words' });
+              gsap.from(s3.words, {
+                opacity: 0, y: 25, duration: 0.55, ease: 'power3.out', stagger: 0.05,
+                scrollTrigger: { trigger: h3, start: 'top 90%', toggleActions: 'play none none reverse' }
+              });
+            }
+          })();
+
+          /* ============================================================
+             ④ FEATURES — thailume-features-section
+          ============================================================ */
+          (function() {
+            var sc = cfg();
+            var section = document.querySelector('.page-wrapper .thailume-features-section');
+            if (!section) return;
+
+            var bgImg = section.querySelector('.thailume-features-img');
+            if (bgImg) {
+              gsap.to(bgImg, {
+                y: 60, ease: 'none',
+                scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 }
+              });
+            }
+
+            var box = section.querySelector('.thailume-features-box');
+            if (box) {
+              gsap.fromTo(box, { opacity: 0, y: 50, scale: 0.96 }, {
+                opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'power3.out',
+                scrollTrigger: { trigger: box, start: sc.start, toggleActions: 'play none none reverse' }
+              });
+            }
+
+            var items = section.querySelectorAll('.thailume-feature-item');
+            items.forEach(function(item, i) {
+              gsap.fromTo(item,
+                { opacity: 0, y: 35, x: i === 0 ? -30 : (i === 2 ? 30 : 0) },
+                { opacity: 1, y: 0, x: 0, duration: 0.6, ease: 'back.out(2)', delay: i * 0.12,
+                  scrollTrigger: { trigger: box || item, start: sc.start, toggleActions: 'play none none reverse' }
+                }
+              );
+              var icon = item.querySelector('.thailume-feature-icon img');
+              if (icon) {
+                gsap.fromTo(icon,
+                  { rotate: -20, scale: 0.6, opacity: 0 },
+                  { rotate: 0, scale: 1, opacity: 1, duration: 0.6, ease: 'back.out(2.5)', delay: i * 0.12 + 0.15,
+                    scrollTrigger: { trigger: box || item, start: sc.start, toggleActions: 'play none none reverse' }
+                  }
+                );
+              }
+            });
+          })();
+
+          /* ============================================================
+             ⑤ RECIPE — aurathai-recipe-section
+          ============================================================ */
+          (function() {
+            var sc = cfg();
+            var section = document.querySelector('.page-wrapper .aurathai-recipe-section');
+            if (!section) return;
+
+            var area = section.querySelector('.aurathai-content-area');
+            if (area) {
+              var h2 = area.querySelector('h2');
+              if (h2) {
+                var s2 = new SplitType(h2, { types: 'lines,words' });
+                gsap.from(s2.words, {
+                  y: 40, opacity: 0, duration: 0.6, ease: 'power3.out', stagger: 0.03,
+                  scrollTrigger: { trigger: area, start: sc.start, toggleActions: 'play none none reverse' }
+                });
+              }
+              var p = area.querySelector('p');
+              if (p) {
+                var sp = new SplitType(p, { types: 'words' });
+                gsap.from(sp.words, {
+                  opacity: 0, y: 14, filter: 'blur(3px)', duration: 0.45, ease: 'power2.out', stagger: 0.012,
+                  scrollTrigger: { trigger: p, start: 'top 88%', toggleActions: 'play none none reverse' }
+                });
+              }
+              var btn = area.querySelector('.order-btn');
+              if (btn) {
+                gsap.fromTo(btn, { scale: 0.6, opacity: 0 }, {
+                  scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(3)',
+                  scrollTrigger: { trigger: btn, start: 'top 95%', toggleActions: 'play none none reverse' },
+                  onComplete: function() { gsap.set(btn, { clearProps: 'all' }); }
+                });
+              }
+            }
+
+            var imgWrap = section.querySelector('.aurathai-image-wrapper');
+            var img = section.querySelector('.aurathai-main-image');
+            if (imgWrap && img) {
+              gsap.fromTo(imgWrap,
+                { clipPath: 'inset(0 0 0 100%)' },
+                { clipPath: 'inset(0 0 0 0%)', duration: 1.1, ease: 'power3.inOut',
+                  scrollTrigger: { trigger: imgWrap, start: sc.start, toggleActions: 'play none none reverse' }
+                }
+              );
+              gsap.to(img, {
+                y: 0, ease: 'none',
+                scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: 1 }
+              });
+            }
+          })();
+
+          /* ============================================================
+             ⑥ SERVICES / FLOW — thaiflow-info-section
+          ============================================================ */
+          (function() {
+            var sc = cfg();
+            var section = document.querySelector('.page-wrapper .thaiflow-info-section');
+            if (!section) return;
+
+            var area = section.querySelector('.thaiflow-content-area');
+            var activeBox = section.querySelector('.thaiflow-content-box.active');
+            if (activeBox && area) {
+              var h2 = activeBox.querySelector('h2');
+              if (h2) {
+                var s2 = new SplitType(h2, { types: 'chars' });
+                gsap.from(s2.chars, {
+                  y: 30, opacity: 0, duration: 0.4, ease: 'back.out(2)', stagger: 0.015,
+                  scrollTrigger: { trigger: area, start: sc.start, toggleActions: 'play none none reverse' }
+                });
+              }
+              var p = activeBox.querySelector('p');
+              if (p) {
+                var sp = new SplitType(p, { types: 'words' });
+                gsap.from(sp.words, {
+                  opacity: 0, y: 12, duration: 0.4, ease: 'power2.out', stagger: 0.01,
+                  scrollTrigger: { trigger: area, start: sc.start, toggleActions: 'play none none reverse' }
+                });
+              }
+            }
+            
+          })();
+
+          /* ============================================================
+             ⑦ GALLERY — thaigallery-section
+          ============================================================ */
+          (function() {
+            var sc = cfg();
+            var section = document.querySelector('.page-wrapper .thaigallery-section');
+            if (!section) return;
+
+            var h2 = section.querySelector('.thaigallery-content-wrap h2');
+            if (h2) {
+              var s2 = new SplitType(h2, { types: 'words' });
+              gsap.from(s2.words, {
+                opacity: 0, y: 35, duration: 0.55, ease: 'power3.out', stagger: 0.05,
+                scrollTrigger: { trigger: h2, start: sc.start, toggleActions: 'play none none reverse' }
+              });
+            }
+
+            var groups = [
+              { sel: '.thaigallery-left-card', from: { x: -40 } },
+              { sel: '.thaigallery-center-card', from: { y: 60 } },
+              { sel: '.thaigallery-bottom-card.one', from: { x: -30, y: 30 } },
+              { sel: '.thaigallery-bottom-card:not(.one)', from: { x: 30, y: 30 } }
+            ];
+            groups.forEach(function(g) {
+              var els = section.querySelectorAll(g.sel);
+              if (!els.length) return;
+              var fromVars = Object.assign({ opacity: 0, scale: 0.92 }, g.from);
+              gsap.fromTo(els, fromVars, {
+                opacity: 1, x: 0, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', stagger: 0.12,
+                scrollTrigger: { trigger: els[0], start: sc.start, toggleActions: 'play none none reverse' }
+              });
+            });
+          })();
+
+          /* ============================================================
+             MAGNETIC ORDER BUTTONS (hover pop, all instances)
+          ============================================================ */
+          document.querySelectorAll('.page-wrapper .order-btn').forEach(function(btn) {
+            btn.addEventListener('mouseenter', function() { gsap.to(btn, { scale: 1.08, duration: 0.25, ease: 'power2.out' }); });
+            btn.addEventListener('mouseleave', function() { gsap.to(btn, { scale: 1, duration: 0.35, ease: 'elastic.out(1, 0.5)' }); });
+          });
+
+          /* Refresh triggers on resize (debounced) so start/end points
+             stay accurate when the CRM viewport / breakpoints change. */
+          var resizeTimer;
+          window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() { ScrollTrigger.refresh(); }, 250);
+          });
+
+          setTimeout(function() { ScrollTrigger.refresh(); }, 350);
+
+        }); /* split-type */
+      }); /* ScrollTrigger */
+    }); /* gsap */
+    </scriptold>
+
+    <scriptold>
+        window.addEventListener("load", function(){
+        pageTopmargin();
+        });
+        pageTopmargin();
+        function pageTopmargin() {
+        var headerHeight = $('#header').height();
+        $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
+        }
+        $("#banner_content").appendTo($("#offer-section"));
+    </scriptold>
